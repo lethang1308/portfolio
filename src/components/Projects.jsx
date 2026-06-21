@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
+import ScrollReveal from './animations/ScrollReveal';
+import StaggerContainer from './animations/StaggerContainer';
 
 export default function Projects() {
   // Render custom tech mockups based on project id instead of relying on external images
@@ -98,26 +100,32 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header Title Grid */}
-        <div className="flex items-end justify-between mb-12">
-          <div>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-slate-900 tracking-tight">
-              Featured Projects
-            </h2>
-            <p className="text-slate-500 text-sm mt-2">
-              Production-ready API architectures and service layers.
-            </p>
+        <ScrollReveal direction="up" duration={800}>
+          <div className="flex items-end justify-between mb-12 w-full">
+            <div>
+              <h2 className="font-display font-bold text-3xl md:text-4xl text-slate-900 tracking-tight">
+                Featured Projects
+              </h2>
+              <p className="text-slate-500 text-sm mt-2">
+                Production-ready API architectures and service layers.
+              </p>
+            </div>
+            <a 
+              href="#projects" 
+              className="hidden sm:inline-flex items-center space-x-1.5 text-xs font-bold tracking-wider text-blue-600 hover:text-blue-700 uppercase"
+            >
+              <span>View all projects</span>
+              <ArrowRight size={14} />
+            </a>
           </div>
-          <a 
-            href="#projects" 
-            className="hidden sm:inline-flex items-center space-x-1.5 text-xs font-bold tracking-wider text-blue-600 hover:text-blue-700 uppercase"
-          >
-            <span>View all projects</span>
-            <ArrowRight size={14} />
-          </a>
-        </div>
+        </ScrollReveal>
 
         {/* Projects Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <StaggerContainer 
+          stagger={120} 
+          direction="up"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
           {projects.map((project) => (
             <div 
               key={project.id}
@@ -186,7 +194,7 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
+        </StaggerContainer>
         
         {/* Mobile only View All link */}
         <div className="sm:hidden text-center mt-10">

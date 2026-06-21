@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Hero from '../components/Hero';
+import HeroBanner from '../components/HeroBanner';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
@@ -15,7 +15,7 @@ export default function Home() {
 
       {/* Main Sections */}
       <main className="flex-grow">
-        <Hero />
+        <HeroBanner />
         <About />
         <Skills />
         <Projects />

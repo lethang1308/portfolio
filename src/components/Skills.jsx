@@ -1,4 +1,6 @@
 import React from 'react';
+import ScrollReveal from './animations/ScrollReveal';
+import StaggerContainer from './animations/StaggerContainer';
 
 export default function Skills() {
   const skillsList = [
@@ -82,11 +84,17 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20 bg-[#fafafa]">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="font-display font-bold text-3xl md:text-4xl text-slate-900 tracking-tight text-center mb-16">
-          Skills
-        </h2>
+        <ScrollReveal direction="up" duration={800}>
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-slate-900 tracking-tight text-center mb-16">
+            Skills
+          </h2>
+        </ScrollReveal>
         
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
+        <StaggerContainer 
+          stagger={100}
+          direction="up"
+          className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16"
+        >
           {skillsList.map((skill) => (
             <div 
               key={skill.name} 
@@ -102,7 +110,7 @@ export default function Skills() {
               </span>
             </div>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

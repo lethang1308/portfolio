@@ -1,5 +1,7 @@
 import React from 'react';
-import heroImg from '../assets/hero-dev.png';
+import { Link } from 'react-router-dom';
+import heroImg from '../assets/1.png';
+import ScrollReveal from './animations/ScrollReveal';
 
 export default function Hero() {
   return (
@@ -9,7 +11,11 @@ export default function Hero() {
       
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         {/* Left Info Column */}
-        <div className="md:col-span-7 flex flex-col items-start space-y-6">
+        <ScrollReveal 
+          direction="up" 
+          duration={800}
+          className="md:col-span-7 flex flex-col items-start space-y-6"
+        >
           <span className="text-blue-600 font-bold tracking-widest text-xs uppercase bg-blue-50 px-3 py-1 rounded">
             BACKEND DEVELOPER
           </span>
@@ -33,17 +39,22 @@ export default function Hero() {
             >
               View Projects
             </a>
-            <a 
-              href="#contact"
+            <Link 
+              to="/contact"
               className="border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold px-6 py-3 rounded-lg text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               Contact Me
-            </a>
+            </Link>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Right Graphic Column */}
-        <div className="md:col-span-5 relative flex justify-center">
+        <ScrollReveal 
+          direction="up" 
+          delay={200} 
+          duration={800}
+          className="md:col-span-5 relative flex justify-center w-full"
+        >
           {/* Dot pattern background */}
           <div className="absolute -right-4 top-4 w-24 h-24 bg-grid-dots opacity-40 -z-10" />
           <div className="absolute -left-6 bottom-6 w-20 h-20 bg-grid-dots opacity-30 -z-10" />
@@ -64,7 +75,7 @@ export default function Hero() {
               Open for Freelance & Full-time
             </span>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

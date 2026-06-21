@@ -1,5 +1,6 @@
 import React from 'react';
 import { Briefcase, CheckCircle2, MapPin, Mail } from 'lucide-react';
+import ScrollReveal from './animations/ScrollReveal';
 
 export default function About() {
   const details = [
@@ -28,7 +29,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
           
           {/* Left Column: Heading & Text */}
-          <div className="space-y-4">
+          <ScrollReveal direction="up" duration={800} className="space-y-4">
             <h2 className="font-display font-bold text-3xl md:text-4xl text-slate-900 tracking-tight">
               About Me
             </h2>
@@ -41,10 +42,15 @@ export default function About() {
               My expertise covers designing RESTful and GraphQL APIs, optimizing database queries, 
               managing containerized workloads, and implementing secure authentication mechanisms.
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Key Details */}
-          <div className="bg-slate-50/50 rounded-2xl border border-slate-100 p-6 md:p-8 space-y-6">
+          <ScrollReveal 
+            direction="up" 
+            delay={200} 
+            duration={800}
+            className="bg-slate-50/50 rounded-2xl border border-slate-100 p-6 md:p-8 space-y-6 w-full"
+          >
             {details.map((detail, idx) => (
               <div key={idx} className="flex items-center space-x-4">
                 <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
@@ -64,7 +70,7 @@ export default function About() {
                 )}
               </div>
             ))}
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

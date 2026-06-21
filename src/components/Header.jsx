@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,11 +16,34 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e, item) => {
+    setIsOpen(false);
+    if (item.href.startsWith('/#')) {
+      e.preventDefault();
+      const targetId = item.href.replace('/#', '');
+      
+      if (location.pathname === '/') {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.getElementById(targetId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 150);
+      }
+    }
+  };
+
   const navItems = [
-    { label: 'ABOUT', href: '#about' },
-    { label: 'SKILLS', href: '#skills' },
-    { label: 'PROJECTS', href: '#projects' },
-    { label: 'CONTACT', href: '#contact' },
+    { label: 'ABOUT', href: '/about', isPage: true },
+    { label: 'SKILLS', href: '/skills', isPage: true },
+    { label: 'PROJECTS', href: '/#projects' },
+    { label: 'CONTACT', href: '/contact', isPage: true },
   ];
 
   return (
@@ -28,22 +54,34 @@ export default function Header() {
     }`}>
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2">
           <div className="border-[2.5px] border-slate-900 px-3 py-1 font-display font-extrabold text-lg tracking-wider text-slate-900">
             HD
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
-            <a 
-              key={item.label}
-              href={item.href}
-              className="text-xs font-bold tracking-widest text-slate-600 hover:text-blue-600 transition-colors"
-            >
-              {item.label}
-            </a>
+            item.isPage ? (
+              <Link
+                key={item.label}
+                to={item.href}
+                onClick={() => setIsOpen(false)}
+                className="text-xs font-bold tracking-widest text-slate-600 hover:text-blue-600 transition-colors"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a 
+                key={item.label}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item)}
+                className="text-xs font-bold tracking-widest text-slate-600 hover:text-blue-600 transition-colors"
+              >
+                {item.label}
+              </a>
+            )
           ))}
         </div>
 
@@ -71,14 +109,25 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-lg py-6 px-6 space-y-4 flex flex-col items-center">
           {navItems.map((item) => (
-            <a 
-              key={item.label}
-              href={item.href}
-              onClick={() => setIsOpen(false)}
-              className="text-xs font-bold tracking-widest text-slate-600 hover:text-blue-600 transition-colors w-full text-center py-2"
-            >
-              {item.label}
-            </a>
+            item.isPage ? (
+              <Link
+                key={item.label}
+                to={item.href}
+                onClick={() => setIsOpen(false)}
+                className="text-xs font-bold tracking-widest text-slate-600 hover:text-blue-600 transition-colors w-full text-center py-2 block"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a 
+                key={item.label}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item)}
+                className="text-xs font-bold tracking-widest text-slate-600 hover:text-blue-600 transition-colors w-full text-center py-2 block"
+              >
+                {item.label}
+              </a>
+            )
           ))}
           <a
             href="#cv"
