@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Database, Shield, Cpu, Code, Server, ArrowUpRight } from 'lucide-react';
 import { projects } from '../data/projects';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function ProjectDetail() {
@@ -30,19 +31,9 @@ export default function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fafafa] flex flex-col justify-between font-sans">
-      {/* Header Bar */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-100 py-4">
-        <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2 text-slate-600 hover:text-slate-900 group">
-            <ArrowLeft size={18} className="transform group-hover:-translate-x-1 transition-transform" />
-            <span className="text-xs font-bold tracking-widest uppercase">Back to Home</span>
-          </Link>
-          <div className="border-[2px] border-slate-900 px-2 py-0.5 font-display font-extrabold text-sm tracking-wider text-slate-900 select-none">
-            HD
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-[#fafafa] flex flex-col justify-between font-sans pt-28 md:pt-36">
+      {/* Navigation */}
+      <Header />
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-6 py-12 flex-1 w-full space-y-12">

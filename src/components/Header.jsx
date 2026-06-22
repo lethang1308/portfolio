@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,9 +56,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <div className="border-[2.5px] border-slate-900 px-3 py-1 font-display font-extrabold text-lg tracking-wider text-slate-900">
-            HD
-          </div>
+          <img src={logoImg} alt="Hoang Duy Logo" className="h-16 md:h-20 w-auto object-contain" />
         </Link>
 
         {/* Desktop Nav */}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone, Calendar, Send, ChevronRight } from 'lucide-react';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 import ScrollReveal from '../components/animations/ScrollReveal';
 import StaggerContainer from '../components/animations/StaggerContainer';
 
@@ -130,21 +131,10 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafafa] flex flex-col justify-between font-sans">
+    <div className="min-h-screen bg-[#fafafa] flex flex-col justify-between font-sans pt-28 md:pt-36">
       
-      {/* Header Bar */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-100 py-4">
-        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          <Link to="/" className="border-[2px] border-slate-900 px-3 py-1 font-display font-extrabold text-lg tracking-wider text-slate-900">
-            HD
-          </Link>
-          <div className="flex items-center space-x-1 text-xs font-bold tracking-widest text-slate-600 uppercase">
-            <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
-            <ChevronRight size={14} className="text-slate-400" />
-            <span className="text-blue-600">Contact</span>
-          </div>
-        </div>
-      </header>
+      {/* Navigation */}
+      <Header />
 
       {/* Main Grid Wrapper */}
       <main className="max-w-6xl mx-auto px-6 py-10 flex-1 w-full space-y-12">
