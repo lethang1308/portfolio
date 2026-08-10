@@ -1,25 +1,28 @@
 import React from 'react';
 import { Briefcase, CheckCircle2, MapPin, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import ScrollReveal from './animations/ScrollReveal';
 
 export default function About() {
+  const { t } = useTranslation();
+
   const details = [
     {
       icon: <Briefcase className="text-blue-600" size={20} />,
-      text: "3+ Years Experience",
+      text: t('about.exp'),
     },
     {
       icon: <CheckCircle2 className="text-blue-600" size={20} />,
-      text: "Available for new opportunities",
+      text: t('about.available'),
     },
     {
       icon: <MapPin className="text-blue-600" size={20} />,
-      text: "Ho Chi Minh City, Vietnam",
+      text: t('about.location'),
     },
     {
       icon: <Mail className="text-blue-600" size={20} />,
-      text: "duy.hoang.dev@gmail.com",
-      href: "mailto:duy.hoang.dev@gmail.com",
+      text: "dinhthang.dev@gmail.com",
+      href: "mailto:dinhthang.dev@gmail.com",
     },
   ];
 
@@ -31,16 +34,13 @@ export default function About() {
           {/* Left Column: Heading & Text */}
           <ScrollReveal direction="up" duration={800} className="space-y-4">
             <h2 className="font-display font-bold text-3xl md:text-4xl text-slate-900 tracking-tight">
-              About Me
+              {t('about.title')}
             </h2>
             <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-lg">
-              I'm a backend developer with a strong passion for building scalable applications 
-              and designing clean, maintainable code. I enjoy working with modern technologies 
-              and solving challenging architectural and algorithmic problems.
+              {t('about.p1')}
             </p>
             <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-lg">
-              My expertise covers designing RESTful and GraphQL APIs, optimizing database queries, 
-              managing containerized workloads, and implementing secure authentication mechanisms.
+              {t('about.p2')}
             </p>
           </ScrollReveal>
 

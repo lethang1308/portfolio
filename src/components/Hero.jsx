@@ -23,7 +23,7 @@ export default function Hero() {
           <h1 className="font-display font-extrabold text-5xl md:text-6xl text-slate-900 leading-[1.1] tracking-tight">
             Hello, I'm <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">
-              Hoang Duy
+              Dinh Thang
             </span>
           </h1>
           
@@ -63,7 +63,7 @@ export default function Hero() {
           <div className="relative w-full max-w-sm aspect-[4/5] bg-gradient-to-tr from-slate-100 to-slate-50 rounded-3xl overflow-hidden shadow-2xl shadow-slate-100 border border-slate-100/50">
             <img 
               src={heroImg} 
-              alt="Hoang Duy Backend Developer" 
+              alt="Dinh Thang Backend Developer" 
               className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
             />
           </div>

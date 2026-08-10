@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ScrollReveal from './animations/ScrollReveal';
 import StaggerContainer from './animations/StaggerContainer';
 
 export default function Skills() {
+  const { t } = useTranslation();
   const skillsList = [
     {
       name: "Node.js",
@@ -86,7 +88,7 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal direction="up" duration={800}>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-slate-900 tracking-tight text-center mb-16">
-            Skills
+            {t('skills.title')}
           </h2>
         </ScrollReveal>
         

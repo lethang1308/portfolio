@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Database, Cloud, Cpu, Server, LayoutGrid, ChevronRight, ArrowUp } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import ScrollReveal from '../components/animations/ScrollReveal';
@@ -8,6 +9,7 @@ import StaggerContainer from '../components/animations/StaggerContainer';
 import AnimatedProgressBar from '../components/animations/AnimatedProgressBar';
 
 export default function SkillsPage() {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
   const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -25,18 +27,18 @@ export default function SkillsPage() {
   };
 
   const categories = [
-    { id: 'All', label: 'All', icon: <LayoutGrid size={16} /> },
-    { id: 'Backend', label: 'Backend', icon: <Server size={16} /> },
-    { id: 'Database', label: 'Database', icon: <Database size={16} /> },
-    { id: 'DevOps', label: 'DevOps', icon: <Cloud size={16} /> },
-    { id: 'Architecture', label: 'Architecture', icon: <Cpu size={16} /> },
+    { id: 'All', label: t('skillsPage.categories.All'), icon: <LayoutGrid size={16} /> },
+    { id: 'Backend', label: t('skillsPage.categories.Backend'), icon: <Server size={16} /> },
+    { id: 'Database', label: t('skillsPage.categories.Database'), icon: <Database size={16} /> },
+    { id: 'DevOps', label: t('skillsPage.categories.DevOps'), icon: <Cloud size={16} /> },
+    { id: 'Architecture', label: t('skillsPage.categories.Architecture'), icon: <Cpu size={16} /> },
   ];
 
   const coreSkills = [
     {
       name: "Node.js",
       category: "Backend",
-      description: "JavaScript runtime for scalable apps",
+      description: t('skillsPage.skillDescriptions.Node.js'),
       rating: 4,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#68a063]" fill="currentColor">
@@ -47,7 +49,7 @@ export default function SkillsPage() {
     {
       name: "NestJS",
       category: "Backend",
-      description: "Progressive Node.js framework",
+      description: t('skillsPage.skillDescriptions.NestJS'),
       rating: 5,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#ea2849]" fill="currentColor">
@@ -58,7 +60,7 @@ export default function SkillsPage() {
     {
       name: "Express",
       category: "Backend",
-      description: "Fast, unopinionated web framework",
+      description: t('skillsPage.skillDescriptions.Express'),
       rating: 4,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-slate-800" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -72,7 +74,7 @@ export default function SkillsPage() {
     {
       name: "PostgreSQL",
       category: "Database",
-      description: "Advanced relational database",
+      description: t('skillsPage.skillDescriptions.PostgreSQL'),
       rating: 5,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#336791]" fill="currentColor">
@@ -83,7 +85,7 @@ export default function SkillsPage() {
     {
       name: "MySQL",
       category: "Database",
-      description: "Reliable relational database",
+      description: t('skillsPage.skillDescriptions.MySQL'),
       rating: 4,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#00758f]" fill="currentColor">
@@ -94,7 +96,7 @@ export default function SkillsPage() {
     {
       name: "MongoDB",
       category: "Database",
-      description: "NoSQL document database",
+      description: t('skillsPage.skillDescriptions.MongoDB'),
       rating: 4,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#13aa52]" fill="currentColor">
@@ -105,7 +107,7 @@ export default function SkillsPage() {
     {
       name: "Redis",
       category: "Database",
-      description: "In-memory data structure store",
+      description: t('skillsPage.skillDescriptions.Redis'),
       rating: 5,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#d82c20]" fill="currentColor">
@@ -116,7 +118,7 @@ export default function SkillsPage() {
     {
       name: "Docker",
       category: "DevOps",
-      description: "Containerization platform",
+      description: t('skillsPage.skillDescriptions.Docker'),
       rating: 4,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#0db7ed]" fill="currentColor">
@@ -127,7 +129,7 @@ export default function SkillsPage() {
     {
       name: "Git",
       category: "DevOps",
-      description: "Version control system",
+      description: t('skillsPage.skillDescriptions.Git'),
       rating: 5,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#f05032]" fill="currentColor">
@@ -138,7 +140,7 @@ export default function SkillsPage() {
     {
       name: "JWT Auth",
       category: "Architecture",
-      description: "Secure authentication with JWT",
+      description: t('skillsPage.skillDescriptions.JWT Auth'),
       rating: 4,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -151,7 +153,7 @@ export default function SkillsPage() {
     {
       name: "REST API",
       category: "Architecture",
-      description: "Design & build RESTful services",
+      description: t('skillsPage.skillDescriptions.REST API'),
       rating: 5,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -164,7 +166,7 @@ export default function SkillsPage() {
     {
       name: "System Design",
       category: "Architecture",
-      description: "Scalable & reliable system architecture",
+      description: t('skillsPage.skillDescriptions.System Design'),
       rating: 5,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -196,7 +198,7 @@ export default function SkillsPage() {
   const learningExploring = [
     {
       name: "Kafka",
-      description: "Event streaming platform",
+      description: t('skillsPage.learningSkills.Kafka'),
       progress: 60,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-slate-800" fill="currentColor">
@@ -206,7 +208,7 @@ export default function SkillsPage() {
     },
     {
       name: "AWS",
-      description: "Cloud services & deployment",
+      description: t('skillsPage.learningSkills.AWS'),
       progress: 50,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#ff9900]" fill="currentColor">
@@ -216,7 +218,7 @@ export default function SkillsPage() {
     },
     {
       name: "GraphQL",
-      description: "Query language for APIs",
+      description: t('skillsPage.learningSkills.GraphQL'),
       progress: 40,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#e10098]" fill="currentColor">
@@ -238,7 +240,7 @@ export default function SkillsPage() {
         {/* Title */}
         <ScrollReveal direction="up" delay={100}>
           <h1 className="font-display font-extrabold text-4xl text-slate-900 tracking-tight">
-            Skills
+            {t('skillsPage.title')}
           </h1>
         </ScrollReveal>
 
@@ -266,7 +268,7 @@ export default function SkillsPage() {
         <div className="space-y-6">
           <ScrollReveal direction="up">
             <h2 className="font-display font-bold text-lg text-slate-900 tracking-tight">
-              Core Skills
+              {t('skillsPage.coreSkillsTitle')}
             </h2>
           </ScrollReveal>
 
@@ -314,13 +316,13 @@ export default function SkillsPage() {
         <div className="space-y-4">
           <ScrollReveal direction="up" className="flex items-center justify-between">
             <h2 className="font-display font-bold text-lg text-slate-900 tracking-tight">
-              Currently using most
+              {t('skillsPage.currentlyUsingTitle')}
             </h2>
             <Link 
               to="/" 
               className="text-xs font-bold tracking-wider text-blue-600 hover:text-blue-700 uppercase flex items-center space-x-1"
             >
-              <span>View workflow</span>
+              <span>{t('skillsPage.viewWorkflow')}</span>
               <span>&rarr;</span>
             </Link>
           </ScrollReveal>
@@ -349,13 +351,13 @@ export default function SkillsPage() {
         <div className="space-y-4">
           <ScrollReveal direction="up" className="flex items-center justify-between">
             <h2 className="font-display font-bold text-lg text-slate-900 tracking-tight">
-              Learning / Exploring
+              {t('skillsPage.learningExploringTitle')}
             </h2>
             <Link 
               to="/" 
               className="text-xs font-bold tracking-wider text-blue-600 hover:text-blue-700 uppercase flex items-center space-x-1"
             >
-              <span>View roadmap</span>
+              <span>{t('skillsPage.viewRoadmap')}</span>
               <span>&rarr;</span>
             </Link>
           </ScrollReveal>

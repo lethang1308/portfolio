@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import ScrollReveal from './animations/ScrollReveal';
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <section id="contact" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
@@ -15,11 +18,10 @@ export default function Contact() {
           {/* Left Text Column */}
           <div className="text-center md:text-left space-y-2">
             <h2 className="font-display font-bold text-2xl md:text-3xl text-slate-900 tracking-tight">
-              Interested in working together?
+              {t('contact.interestedTitle')}
             </h2>
             <p className="text-slate-500 text-sm md:text-base max-w-lg">
-              I'm always open to discussing new projects, APIs architecture design, 
-              system optimization, or full-time opportunities.
+              {t('contact.interestedDesc')}
             </p>
           </div>
 
@@ -28,7 +30,7 @@ export default function Contact() {
               to="/contact"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl text-sm transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20"
             >
-              Contact Me
+              {t('contact.contactMe')}
             </Link>
           </div>
         </ScrollReveal>

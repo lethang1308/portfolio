@@ -1,0 +1,176 @@
+{
+  "nav": {
+    "about": "ABOUT",
+    "skills": "SKILLS",
+    "projects": "PROJECTS",
+    "contact": "CONTACT",
+    "downloadCv": "DOWNLOAD CV"
+  },
+  "hero": {
+    "badge": "BACKEND DEVELOPER",
+    "greeting": "Hello, I'm",
+    "name": "Dinh Thang",
+    "description": "I build reliable backend systems and APIs that solve real-world problems. Focused on database optimization, clean architecture, and highly performant codebases.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "I'm a backend developer with a strong passion for building scalable applications and designing clean, maintainable code. I enjoy working with modern technologies and solving challenging architectural and algorithmic problems.",
+    "p2": "My expertise covers designing RESTful and GraphQL APIs, optimizing database queries, managing containerized workloads, and implementing secure authentication mechanisms.",
+    "exp": "3+ Years Experience",
+    "available": "Available for new opportunities",
+    "location": "Ho Chi Minh City, Vietnam"
+  },
+  "aboutPage": {
+    "title": "About Me",
+    "subtitle": "Backend developer passionate about building reliable, scalable and secure systems.",
+    "role": "Backend Developer",
+    "location": "Ho Chi Minh City, Vietnam",
+    "status": "Available for opportunities",
+    "storyTitle": "My Story",
+    "storyP1": "I'm a backend developer who loves turning complex business ideas into robust, scalable, and resilient systems. My journey started with a strong curiosity about how information flows behind the scenes—from raw web requests down to databases, caching queues, and background jobs.",
+    "storyP2": "Over the years, I've built and optimized secure APIs, structured microservices, and designed high-throughput database models that serve thousands of active users. I enjoy solving complex algorithmic bottlenecks, tweaking database query planners, and writing testable and maintainable code.",
+    "storyP3": "When I'm not writing code, you can find me reading architectural design patterns, experimenting with server operations, or exploring open source backend projects.",
+    "principlesTitle": "My Principles",
+    "principles": [
+      "Write clean, maintainable and tested code",
+      "Design for scale and future changes",
+      "Automate everything that can be automated",
+      "Measure, observe and improve continuously",
+      "Security and reliability by design"
+    ],
+    "journeyTitle": "Backend Journey",
+    "journey": [
+      { "year": "2019", "title": "Started my journey with Python and Django. Built my first REST API." },
+      { "year": "2020", "title": "Discovered Node.js / Express and fell in love with asynchronous programming." },
+      { "year": "2021", "title": "Started working with Docker, microservices, and cluster architectures." },
+      { "year": "2022", "title": "Focused on database scalability, caching optimization (Redis), and observability." },
+      { "year": "2023+", "title": "Building reliable platforms, mentoring junior developers, and contributing to open source." }
+    ],
+    "buildSystemsTitle": "How I Build Systems",
+    "buildSystems": [
+      { "title": "API Design", "desc": "RESTful and gRPC APIs with clarity and versioning." },
+      { "title": "Authentication", "desc": "Secure auth with JWT, OAuth2 and RBAC." },
+      { "title": "Database Design", "desc": "Normalized schemas, indexes and query optimization." },
+      { "title": "Caching", "desc": "Redis for caching, sessions and rate limiting." },
+      { "title": "Observability", "desc": "Logs, metrics and tracing for actionable insights." },
+      { "title": "Deployment", "desc": "CI/CD pipelines, containerized and automated." }
+    ],
+    "favoriteTechTitle": "Favorite Technologies",
+    "achievementsTitle": "Achievements",
+    "achievements": {
+      "projects": "Projects Built",
+      "openSource": "OS Contribs",
+      "experience": "Years Exp",
+      "rps": "RPS Handled/Day"
+    },
+    "focusedTitle": "Currently Focused On",
+    "focusAreas": [
+      { "title": "Microservices", "desc": "Building scalable and loosely coupled services." },
+      { "title": "Performance Optimization", "desc": "Improving latency, throughput and resource usage." },
+      { "title": "Clean Architecture", "desc": "Building maintainable and testable backend systems." },
+      { "title": "Security Best Practices", "desc": "Implementing security at every layer of the system." }
+    ],
+    "ctaTitle": "Let's build something impactful together",
+    "ctaDesc": "I'm open to exciting opportunities, architectural reviews, and engineering collaborations.",
+    "ctaProjects": "View My Projects",
+    "ctaContact": "Get In Touch"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "skillsPage": {
+    "title": "Skills",
+    "categories": {
+      "All": "All",
+      "Backend": "Backend",
+      "Database": "Database",
+      "DevOps": "DevOps",
+      "Architecture": "Architecture"
+    },
+    "coreSkillsTitle": "Core Skills",
+    "skillDescriptions": {
+      "Node.js": "JavaScript runtime for scalable apps",
+      "NestJS": "Progressive Node.js framework",
+      "Express": "Fast, unopinionated web framework",
+      "PostgreSQL": "Advanced relational database",
+      "MySQL": "Reliable relational database",
+      "MongoDB": "NoSQL document database",
+      "Redis": "In-memory data structure store",
+      "Docker": "Containerization platform",
+      "Git": "Version control system",
+      "JWT Auth": "Secure authentication with JWT",
+      "REST API": "Design & build RESTful services",
+      "System Design": "Scalable & reliable system architecture"
+    },
+    "currentlyUsingTitle": "Currently using most",
+    "viewWorkflow": "View workflow",
+    "learningExploringTitle": "Learning / Exploring",
+    "viewRoadmap": "View roadmap",
+    "learningSkills": {
+      "Kafka": "Event streaming platform",
+      "AWS": "Cloud services & deployment",
+      "GraphQL": "Query language for APIs"
+    }
+  },
+  "projects": {
+    "featuredTitle": "Featured Projects",
+    "featuredDesc": "Production-ready API architectures and service layers.",
+    "viewAll": "View all projects",
+    "viewDetails": "View Details"
+  },
+  "projectDetail": {
+    "notFound": "Project not found",
+    "backToHome": "Back to Home",
+    "sourceCode": "Source Code",
+    "systemFeaturesTitle": "Key System Features",
+    "systemArchitectureTitle": "System Architecture",
+    "databaseDesignTitle": "Database Schema Design",
+    "perfMetricsTitle": "Performance Metrics & Benchmarks",
+    "cachingLayer": "Caching Layer",
+    "loadSimulation": "Load Simulation",
+    "apiEndpointDocTitle": "Core API Endpoint Documentation",
+    "tableMethod": "Method",
+    "tableEndpoint": "Endpoint",
+    "tableDesc": "Description"
+  },
+  "contact": {
+    "interestedTitle": "Interested in working together?",
+    "interestedDesc": "I'm always open to discussing new projects, APIs architecture design, system optimization, or full-time opportunities.",
+    "contactMe": "Contact Me"
+  },
+  "contactPage": {
+    "badge": "CONTACT",
+    "title": "Let's Connect",
+    "desc": "Have a project in mind or want to say hi? Feel free to reach out to me.",
+    "labels": {
+      "email": "Email",
+      "location": "Location",
+      "phone": "Phone",
+      "availability": "Availability",
+      "name": "Your Name",
+      "emailInput": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message"
+    },
+    "values": {
+      "location": "Ho Chi Minh City, Vietnam",
+      "availability": "Open for new opportunities"
+    },
+    "placeholders": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message..."
+    },
+    "sendBtn": "Send Message",
+    "messageSentTitle": "Message Sent!",
+    "messageSentDesc": "Thank you for reaching out. Dinh Thang will get back to you shortly.",
+    "connectTitle": "Connect with me",
+    "connectDesc": "Let's stay in touch on these platforms."
+  },
+  "footer": {
+    "rights": "Dinh Thang. All rights reserved."
+  }
+}

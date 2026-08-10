@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { User, Star, Milestone, ShieldCheck, Award, Target, ChevronRight, Mail, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import heroImg from '../assets/1.png';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -43,90 +44,56 @@ function Counter({ end, duration = 1500, suffix = "" }) {
 }
 
 export default function AboutPage() {
+  const { t } = useTranslation();
   
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const principles = [
-    "Write clean, maintainable and tested code",
-    "Design for scale and future changes",
-    "Automate everything that can be automated",
-    "Measure, observe and improve continuously",
-    "Security and reliability by design"
-  ];
+  const principles = t('aboutPage.principles', { returnObjects: true }) || [];
+  const journey = t('aboutPage.journey', { returnObjects: true }) || [];
+  const buildSystems = t('aboutPage.buildSystems', { returnObjects: true }) || [];
+  const focusAreas = t('aboutPage.focusAreas', { returnObjects: true }) || [];
 
-  const journey = [
-    { year: "2019", title: "Started my journey with Python and Django. Built my first REST API." },
-    { year: "2020", title: "Discovered Node.js / Express and fell in love with asynchronous programming." },
-    { year: "2021", title: "Started working with Docker, microservices, and cluster architectures." },
-    { year: "2022", title: "Focused on database scalability, caching optimization (Redis), and observability." },
-    { year: "2023+", title: "Building reliable platforms, mentoring junior developers, and contributing to open source." }
-  ];
-
-  const buildSystems = [
-    {
-      title: "API Design",
-      desc: "RESTful and gRPC APIs with clarity and versioning.",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
-          <polyline points="16 18 22 12 16 6" />
-          <polyline points="8 6 2 12 8 18" />
-        </svg>
-      )
-    },
-    {
-      title: "Authentication",
-      desc: "Secure auth with JWT, OAuth2 and RBAC.",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-        </svg>
-      )
-    },
-    {
-      title: "Database Design",
-      desc: "Normalized schemas, indexes and query optimization.",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
-          <ellipse cx="12" cy="5" rx="9" ry="3" />
-          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-          <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
-        </svg>
-      )
-    },
-    {
-      title: "Caching",
-      desc: "Redis for caching, sessions and rate limiting.",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
-          <rect x="2" y="2" width="20" height="8" rx="2" />
-          <rect x="2" y="14" width="20" height="8" rx="2" />
-          <line x1="6" y1="6" x2="6.01" y2="6" />
-          <line x1="6" y1="18" x2="6.01" y2="18" />
-        </svg>
-      )
-    },
-    {
-      title: "Observability",
-      desc: "Logs, metrics and tracing for actionable insights.",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M2 12h25" />
-          <path d="M6 12L10 4l4 16 4-12 2 4" />
-        </svg>
-      )
-    },
-    {
-      title: "Deployment",
-      desc: "CI/CD pipelines, containerized and automated.",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
-          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-        </svg>
-      )
-    }
+  const buildSystemIcons = [
+    (
+      <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+      </svg>
+    ),
+    (
+      <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+      </svg>
+    ),
+    (
+      <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
+        <ellipse cx="12" cy="5" rx="9" ry="3" />
+        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
+      </svg>
+    ),
+    (
+      <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="2" y="2" width="20" height="8" rx="2" />
+        <rect x="2" y="14" width="20" height="8" rx="2" />
+        <line x1="6" y1="6" x2="6.01" y2="6" />
+        <line x1="6" y1="18" x2="6.01" y2="18" />
+      </svg>
+    ),
+    (
+      <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M2 12h25" />
+        <path d="M6 12L10 4l4 16 4-12 2 4" />
+      </svg>
+    ),
+    (
+      <svg viewBox="0 0 24 24" className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+      </svg>
+    )
   ];
 
   const technologies = [
@@ -140,13 +107,6 @@ export default function AboutPage() {
     { name: "AWS", color: "#FF9900", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.8 14.3c-.6 0-1-.4-1-.9s.4-.9 1-.9 1 .4 1 .9-.4.9-1 .9zm3.8-3.4c-.6 0-1-.4-1-.9s.4-.9 1-.9 1 .4 1 .9-.4.9-1 .9zm-1.9-2.7c-.6 0-1-.4-1-.9s.4-.9 1-.9 1 .4 1 .9-.4.9-1 .9z"/></svg> },
     { name: "Nginx", color: "#009639", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2.4 8.7c-.1-.7-.1-1.5 0-2.2-.4.6-.7 1.3-.9 2 .2.1.6.2.9.2zm4.8 0c.3 0 .7-.1.9-.2-.2-.7-.5-1.4-.9-2 .1.7.1 1.5 0 2.2zM12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/></svg> },
     { name: "Terraform", color: "#7B42BC", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M23.2 11.5L12.5.8a1.7 1.7 0 0 0-2.4 0L8.7 2.2l3 3a1.7 1.7 0 0 1 .4 1.7L10.3 8.7a1.7 1.7 0 0 1-1.7-.4L6.9 6.6a1.7 1.7 0 0 1-.3-1.8L9 .8a1.7 1.7 0 0 0-2.4 0L.8 6.6a1.7 1.7 0 0 0 0 2.4l10.7 10.7a1.7 1.7 0 0 0 2.4 0l9.3-9.3a1.7 1.7 0 0 0 0-2.4z"/></svg> }
-  ];
-
-  const focusAreas = [
-    { title: "Microservices", desc: "Building scalable and loosely coupled services." },
-    { title: "Performance Optimization", desc: "Improving latency, throughput and resource usage." },
-    { title: "Clean Architecture", desc: "Building maintainable and testable backend systems." },
-    { title: "Security Best Practices", desc: "Implementing security at every layer of the system." }
   ];
 
   return (
@@ -168,12 +128,12 @@ export default function AboutPage() {
           <div>
             <ScrollReveal direction="up" delay={100}>
               <h1 className="font-display font-extrabold text-4xl text-slate-900 tracking-tight leading-none">
-                About Me
+                {t('aboutPage.title')}
               </h1>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={200}>
               <p className="text-slate-500 text-sm mt-2">
-                Backend developer passionate about building reliable, scalable and secure systems.
+                {t('aboutPage.subtitle')}
               </p>
             </ScrollReveal>
           </div>
@@ -190,21 +150,21 @@ export default function AboutPage() {
           >
             <div className="bg-white border border-slate-100/80 rounded-3xl p-6 shadow-sm flex flex-col items-center text-center space-y-4 w-full">
               <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-slate-50 shadow-md">
-                <img src={heroImg} alt="Hoang Duy Profile" className="w-full h-full object-cover object-center" />
+                <img src={heroImg} alt="Dinh Thang Profile" className="w-full h-full object-cover object-center" />
               </div>
               <div>
-                <h2 className="font-display font-extrabold text-xl text-slate-900">Hoang Duy</h2>
-                <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mt-1">Backend Developer</p>
+                <h2 className="font-display font-extrabold text-xl text-slate-900">Dinh Thang</h2>
+                <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mt-1">{t('aboutPage.role')}</p>
               </div>
               
               <div className="w-full border-t border-slate-100 pt-4 space-y-3 text-left">
                 <div className="flex items-center space-x-3 text-slate-600 text-xs">
                   <MapPin size={16} className="text-slate-400" />
-                  <span>Ho Chi Minh City, Vietnam</span>
+                  <span>{t('aboutPage.location')}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-600 text-xs">
                   <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0" />
-                  <span className="font-semibold text-slate-800">Available for opportunities</span>
+                  <span className="font-semibold text-slate-800">{t('aboutPage.status')}</span>
                 </div>
               </div>
 
@@ -220,7 +180,7 @@ export default function AboutPage() {
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
                 </a>
-                <a href="mailto:duy.hoang.dev@gmail.com" className="p-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-500 hover:text-slate-950 transition-colors">
+                <a href="mailto:dinhthang.dev@gmail.com" className="p-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-500 hover:text-slate-950 transition-colors">
                   <Mail size={16} />
                 </a>
               </div>
@@ -236,24 +196,13 @@ export default function AboutPage() {
             <div className="bg-white border border-slate-100/80 rounded-3xl p-6 md:p-8 shadow-sm space-y-4 w-full">
               <div className="flex items-center space-x-3 text-slate-800">
                 <User size={20} className="text-blue-600" />
-                <h2 className="font-display font-extrabold text-lg">My Story</h2>
+                <h2 className="font-display font-extrabold text-lg">{t('aboutPage.storyTitle')}</h2>
               </div>
               
               <div className="text-slate-500 text-sm md:text-base leading-relaxed space-y-4">
-                <p>
-                  I'm a backend developer who loves turning complex business ideas into robust, scalable, 
-                  and resilient systems. My journey started with a strong curiosity about how information 
-                  flows behind the scenes—from raw web requests down to databases, caching queues, and background jobs.
-                </p>
-                <p>
-                  Over the years, I've built and optimized secure APIs, structured microservices, and designed 
-                  high-throughput database models that serve thousands of active users. I enjoy solving complex 
-                  algorithmic bottlenecks, tweaking database query planners, and writing testable and maintainable codes.
-                </p>
-                <p>
-                  When I'm not writing codes, you can find me reading architectural design patterns, experimenting 
-                  with server operations, or exploring open source backend projects.
-                </p>
+                <p>{t('aboutPage.storyP1')}</p>
+                <p>{t('aboutPage.storyP2')}</p>
+                <p>{t('aboutPage.storyP3')}</p>
               </div>
             </div>
           </ScrollReveal>
@@ -272,7 +221,7 @@ export default function AboutPage() {
             <div className="bg-white border border-slate-100/80 rounded-3xl p-6 shadow-sm space-y-6 w-full">
               <div className="flex items-center space-x-3 text-slate-800">
                 <Star size={20} className="text-blue-600" />
-                <h2 className="font-display font-extrabold text-lg">My Principles</h2>
+                <h2 className="font-display font-extrabold text-lg">{t('aboutPage.principlesTitle')}</h2>
               </div>
               
               <ul className="space-y-4">
@@ -295,7 +244,7 @@ export default function AboutPage() {
             <div className="bg-white border border-slate-100/80 rounded-3xl p-6 shadow-sm space-y-6 w-full">
               <div className="flex items-center space-x-3 text-slate-800">
                 <Milestone size={20} className="text-blue-600" />
-                <h2 className="font-display font-extrabold text-lg">Backend Journey</h2>
+                <h2 className="font-display font-extrabold text-lg">{t('aboutPage.journeyTitle')}</h2>
               </div>
 
               {/* Timeline */}
@@ -325,14 +274,14 @@ export default function AboutPage() {
             <div className="bg-white border border-slate-100/80 rounded-3xl p-6 shadow-sm space-y-6 w-full">
               <div className="flex items-center space-x-3 text-slate-800">
                 <ShieldCheck size={20} className="text-blue-600" />
-                <h2 className="font-display font-extrabold text-lg">How I Build Systems</h2>
+                <h2 className="font-display font-extrabold text-lg">{t('aboutPage.buildSystemsTitle')}</h2>
               </div>
 
               <div className="space-y-4 overflow-y-auto max-h-[360px] scrollbar-none pr-1 w-full">
                 {buildSystems.map((sys, idx) => (
                   <div key={idx} className="flex items-start space-x-3">
                     <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center shrink-0 mt-0.5">
-                      {sys.icon}
+                      {buildSystemIcons[idx % buildSystemIcons.length]}
                     </div>
                     <div>
                       <h3 className="font-display font-bold text-xs text-slate-900 leading-tight">
@@ -365,7 +314,7 @@ export default function AboutPage() {
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
                 </svg>
-                <h2 className="font-display font-extrabold text-lg">Favorite Technologies</h2>
+                <h2 className="font-display font-extrabold text-lg">{t('aboutPage.favoriteTechTitle')}</h2>
               </div>
 
               <div className="grid grid-cols-5 gap-4">
@@ -390,7 +339,7 @@ export default function AboutPage() {
             <div className="bg-white border border-slate-100/80 rounded-3xl p-6 shadow-sm space-y-6 w-full">
               <div className="flex items-center space-x-3 text-slate-800">
                 <Award size={20} className="text-blue-600" />
-                <h2 className="font-display font-extrabold text-lg">Achievements</h2>
+                <h2 className="font-display font-extrabold text-lg">{t('aboutPage.achievementsTitle')}</h2>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
@@ -398,25 +347,25 @@ export default function AboutPage() {
                   <div className="text-2xl font-extrabold text-blue-600 font-display">
                     <Counter end={15} suffix="+" />
                   </div>
-                  <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Projects Built</div>
+                  <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">{t('aboutPage.achievements.projects')}</div>
                 </div>
                 <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
                   <div className="text-2xl font-extrabold text-blue-600 font-display">
                     <Counter end={5} suffix="+" />
                   </div>
-                  <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">OS Contribs</div>
+                  <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">{t('aboutPage.achievements.openSource')}</div>
                 </div>
                 <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
                   <div className="text-2xl font-extrabold text-blue-600 font-display">
                     <Counter end={3} suffix="+" />
                   </div>
-                  <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Years Exp</div>
+                  <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">{t('aboutPage.achievements.experience')}</div>
                 </div>
                 <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
                   <div className="text-2xl font-extrabold text-blue-600 font-display">
                     <Counter end={100} suffix="K+" />
                   </div>
-                  <div className="text-[9px] font-bold text-slate-500 uppercase tracking-wider leading-none">RPS Handled/Day</div>
+                  <div className="text-[9px] font-bold text-slate-500 uppercase tracking-wider leading-none">{t('aboutPage.achievements.rps')}</div>
                 </div>
               </div>
             </div>
@@ -428,7 +377,7 @@ export default function AboutPage() {
         <div className="bg-white border border-slate-100/80 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
           <div className="flex items-center space-x-3 text-slate-800">
             <Target size={20} className="text-blue-600" />
-            <h2 className="font-display font-extrabold text-lg">Currently Focused On</h2>
+            <h2 className="font-display font-extrabold text-lg">{t('aboutPage.focusedTitle')}</h2>
           </div>
 
           <StaggerContainer 
@@ -455,10 +404,10 @@ export default function AboutPage() {
           <div className="bg-blue-50/50 border border-blue-100 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-1.5 text-center md:text-left">
               <h2 className="font-display font-extrabold text-xl md:text-2xl text-slate-900 leading-tight">
-                Let's build something impactful together
+                {t('aboutPage.ctaTitle')}
               </h2>
               <p className="text-slate-500 text-sm max-w-lg">
-                I'm open to exciting opportunities, architectural reviews, and engineering collaborations.
+                {t('aboutPage.ctaDesc')}
               </p>
             </div>
             <div className="flex flex-wrap gap-4 shrink-0 justify-center">
@@ -466,14 +415,14 @@ export default function AboutPage() {
                 to="/" 
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3.5 rounded-xl text-xs tracking-wider uppercase transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
-                View My Projects
+                {t('aboutPage.ctaProjects')}
               </Link>
               <Link 
                 to="/contact"
                 className="inline-flex items-center space-x-2 border border-slate-200 hover:bg-slate-50 bg-white text-slate-700 font-bold px-6 py-3.5 rounded-xl text-xs tracking-wider uppercase transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <Mail size={14} />
-                <span>Get In Touch</span>
+                <span>{t('aboutPage.ctaContact')}</span>
               </Link>
             </div>
           </div>

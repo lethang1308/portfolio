@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import heroImg from '../assets/1.png';
 import ParticleBackground from './animations/ParticleBackground';
 import useMousePosition from '../hooks/useMousePosition';
@@ -11,6 +12,7 @@ import useMousePosition from '../hooks/useMousePosition';
  */
 export default function HeroBanner() {
   const heroRef = useRef(null);
+  const { t } = useTranslation();
   // Track mouse coordinates inside this section without triggering React re-renders
   const mouseRef = useMousePosition(heroRef);
 
@@ -35,7 +37,7 @@ export default function HeroBanner() {
             className="text-blue-600 font-bold tracking-widest text-[10px] md:text-xs uppercase bg-blue-50 px-3 py-1 rounded animate-fade-up"
             style={{ animationDelay: '0ms' }}
           >
-            BACKEND DEVELOPER
+            {t('hero.badge')}
           </span>
           
           {/* Title Text */}
@@ -43,9 +45,9 @@ export default function HeroBanner() {
             className="font-display font-extrabold text-5xl md:text-6xl text-slate-900 leading-[1.1] tracking-tight animate-fade-up"
             style={{ animationDelay: '100ms' }}
           >
-            Hello, I'm <br />
+            {t('hero.greeting')} <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">
-              Hoang Duy
+              {t('hero.name')}
             </span>
           </h1>
           
@@ -54,8 +56,7 @@ export default function HeroBanner() {
             className="text-slate-500 text-base md:text-lg max-w-lg leading-relaxed animate-fade-up"
             style={{ animationDelay: '200ms' }}
           >
-            I build reliable backend systems and APIs that solve real-world problems. 
-            Focused on database optimization, clean architecture, and highly performant codebases.
+            {t('hero.description')}
           </p>
           
           {/* Call to Actions */}
@@ -67,13 +68,13 @@ export default function HeroBanner() {
               href="#projects"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg text-sm transition-all hover:shadow-lg hover:shadow-blue-500/10 hover:scale-[1.02] active:scale-[0.98]"
             >
-              View Projects
+              {t('hero.viewProjects')}
             </a>
             <Link 
               to="/contact"
               className="border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold px-6 py-3 rounded-lg text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
-              Contact Me
+              {t('hero.contactMe')}
             </Link>
           </div>
         </div>
@@ -91,7 +92,7 @@ export default function HeroBanner() {
           <div className="relative w-full max-w-sm aspect-[4/5]">
             <img 
               src={heroImg} 
-              alt="Hoang Duy Backend Developer Avatar" 
+              alt="Dinh Thang Backend Developer Avatar" 
               className="w-full h-full object-cover object-center transform hover:scale-[1.03] transition-transform duration-700 ease-out select-none pointer-events-none filter drop-shadow-[0_20px_35px_rgba(59,130,246,0.15)]"
             />
           </div>

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone, Calendar, Send, ChevronRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import ScrollReveal from '../components/animations/ScrollReveal';
 import StaggerContainer from '../components/animations/StaggerContainer';
 
 export default function ContactPage() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -38,33 +40,33 @@ export default function ContactPage() {
   const contactDetails = [
     {
       icon: <Mail className="text-blue-600" size={18} />,
-      label: "Email",
-      value: "duy.hoang.dev@gmail.com",
-      href: "mailto:duy.hoang.dev@gmail.com"
+      label: t('contactPage.labels.email'),
+      value: "dinhthang.dev@gmail.com",
+      href: "mailto:dinhthang.dev@gmail.com"
     },
     {
       icon: <MapPin className="text-blue-600" size={18} />,
-      label: "Location",
-      value: "Ho Chi Minh City, Vietnam"
+      label: t('contactPage.labels.location'),
+      value: t('contactPage.values.location')
     },
     {
       icon: <Phone className="text-blue-600" size={18} />,
-      label: "Phone",
+      label: t('contactPage.labels.phone'),
       value: "+84 123 456 789",
       href: "tel:+84123456789"
     },
     {
       icon: <Calendar className="text-blue-600" size={18} />,
-      label: "Availability",
-      value: "Open for new opportunities"
+      label: t('contactPage.labels.availability'),
+      value: t('contactPage.values.availability')
     }
   ];
 
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com/hoangduy-dev",
-      display: "github.com/hoangduy-dev",
+      url: "https://github.com/dinhthang-dev",
+      display: "github.com/dinhthang-dev",
       color: "hover:border-slate-800 hover:text-slate-800",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 text-slate-800" fill="currentColor">
@@ -74,8 +76,8 @@ export default function ContactPage() {
     },
     {
       name: "LeetCode",
-      url: "https://leetcode.com/hoangduy",
-      display: "leetcode.com/hoangduy",
+      url: "https://leetcode.com/dinhthang",
+      display: "leetcode.com/dinhthang",
       color: "hover:border-orange-500 hover:text-orange-500",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 text-orange-500" fill="currentColor">
@@ -85,8 +87,8 @@ export default function ContactPage() {
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/hoangduy-dev",
-      display: "linkedin.com/in/hoangduy-dev",
+      url: "https://linkedin.com/in/dinhthang-dev",
+      display: "linkedin.com/in/dinhthang-dev",
       color: "hover:border-blue-700 hover:text-blue-700",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#0a66c2]" fill="currentColor">
@@ -96,8 +98,8 @@ export default function ContactPage() {
     },
     {
       name: "Stack Overflow",
-      url: "https://stackoverflow.com/users/hoangduy",
-      display: "stackoverflow.com/users/hoangduy",
+      url: "https://stackoverflow.com/users/dinhthang",
+      display: "stackoverflow.com/users/dinhthang",
       color: "hover:border-orange-600 hover:text-orange-600",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#f48024]" fill="currentColor">
@@ -107,8 +109,8 @@ export default function ContactPage() {
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/hoangduy_dev",
-      display: "twitter.com/hoangduy_dev",
+      url: "https://twitter.com/dinhthang_dev",
+      display: "twitter.com/dinhthang_dev",
       color: "hover:border-slate-900 hover:text-slate-900",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 text-slate-900" fill="currentColor">
@@ -118,8 +120,8 @@ export default function ContactPage() {
     },
     {
       name: "Email",
-      url: "mailto:duy.hoang.dev@gmail.com",
-      display: "duy.hoang.dev@gmail.com",
+      url: "mailto:dinhthang.dev@gmail.com",
+      display: "dinhthang.dev@gmail.com",
       color: "hover:border-red-500 hover:text-red-500",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" strokeWidth="2">
@@ -144,13 +146,13 @@ export default function ContactPage() {
           <ScrollReveal direction="left" duration={800} className="lg:col-span-4 space-y-6">
             <div className="space-y-2">
               <span className="text-blue-600 font-bold tracking-widest text-xs uppercase bg-blue-50 px-3 py-1 rounded">
-                CONTACT
+                {t('contactPage.badge')}
               </span>
               <h1 className="font-display font-extrabold text-4xl text-slate-900 tracking-tight mt-3">
-                Let's Connect<span className="text-blue-600">.</span>
+                {t('contactPage.title')}<span className="text-blue-600">.</span>
               </h1>
               <p className="text-slate-500 text-sm leading-relaxed max-w-sm">
-                Have a project in mind or want to say hi? Feel free to reach out to me.
+                {t('contactPage.desc')}
               </p>
             </div>
 
@@ -183,62 +185,62 @@ export default function ContactPage() {
                 <div className="w-12 h-12 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-500">
                   ✓
                 </div>
-                <h3 className="font-display font-bold text-lg text-slate-900">Message Sent!</h3>
+                <h3 className="font-display font-bold text-lg text-slate-900">{t('contactPage.messageSentTitle')}</h3>
                 <p className="text-slate-500 text-xs max-w-xs leading-relaxed">
-                  Thank you for reaching out. Hoang Duy will get back to you shortly.
+                  {t('contactPage.messageSentDesc')}
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Your Name</label>
+                    <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{t('contactPage.labels.name')}</label>
                     <input 
                       required
                       type="text" 
                       name="name" 
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Your Name" 
+                      placeholder={t('contactPage.placeholders.name')} 
                       className="w-full bg-slate-50/50 border border-slate-100 focus:border-blue-600 focus:bg-white px-4 py-3 rounded-2xl text-xs font-semibold text-slate-800 outline-none transition-all"
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Your Email</label>
+                    <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{t('contactPage.labels.emailInput')}</label>
                     <input 
                       required
                       type="email" 
                       name="email" 
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="Your Email" 
+                      placeholder={t('contactPage.placeholders.email')} 
                       className="w-full bg-slate-50/50 border border-slate-100 focus:border-blue-600 focus:bg-white px-4 py-3 rounded-2xl text-xs font-semibold text-slate-800 outline-none transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Subject</label>
+                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{t('contactPage.labels.subject')}</label>
                   <input 
                     required
                     type="text" 
                     name="subject" 
                     value={formData.subject}
                     onChange={handleInputChange}
-                    placeholder="Subject" 
+                    placeholder={t('contactPage.placeholders.subject')} 
                     className="w-full bg-slate-50/50 border border-slate-100 focus:border-blue-600 focus:bg-white px-4 py-3 rounded-2xl text-xs font-semibold text-slate-800 outline-none transition-all"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Your Message</label>
+                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{t('contactPage.labels.message')}</label>
                   <textarea 
                     required
                     rows="5"
                     name="message" 
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Your Message..." 
+                    placeholder={t('contactPage.placeholders.message')} 
                     className="w-full bg-slate-50/50 border border-slate-100 focus:border-blue-600 focus:bg-white px-4 py-3 rounded-2xl text-xs font-semibold text-slate-800 outline-none transition-all resize-none"
                   />
                 </div>
@@ -247,7 +249,7 @@ export default function ContactPage() {
                   type="submit" 
                   className="w-full md:w-auto inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3.5 rounded-2xl text-xs tracking-wider uppercase transition-all shadow-md shadow-blue-500/10 hover:shadow-blue-500/20 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                 >
-                  <span>Send Message</span>
+                  <span>{t('contactPage.sendBtn')}</span>
                   <Send size={12} />
                 </button>
               </form>
@@ -258,10 +260,10 @@ export default function ContactPage() {
           <ScrollReveal direction="right" duration={800} className="lg:col-span-3 space-y-6">
             <div className="space-y-1">
               <h2 className="font-display font-extrabold text-lg text-slate-900 leading-tight">
-                Connect with me
+                {t('contactPage.connectTitle')}
               </h2>
               <p className="text-slate-500 text-xs leading-normal">
-                Let's stay in touch on these platforms.
+                {t('contactPage.connectDesc')}
               </p>
             </div>
 

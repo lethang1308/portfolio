@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Plus Jakarta Sans", "Outfit", system-ui, -apple-system, sans-serif;
-  --font-display: "Outfit", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Be Vietnam Pro", system-ui, -apple-system, sans-serif;
+  --font-display: "Be Vietnam Pro", "Plus Jakarta Sans", system-ui, sans-serif;
   
   --color-primary-blue: #1d4ed8;
   --color-accent-blue: #2563eb;

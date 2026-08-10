@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import logoImg from '../assets/logo.png';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -41,10 +44,10 @@ export default function Header() {
   };
 
   const navItems = [
-    { label: 'ABOUT', href: '/about', isPage: true },
-    { label: 'SKILLS', href: '/skills', isPage: true },
-    { label: 'PROJECTS', href: '/#projects' },
-    { label: 'CONTACT', href: '/contact', isPage: true },
+    { key: 'about', label: t('nav.about'), href: '/about', isPage: true },
+    { key: 'skills', label: t('nav.skills'), href: '/skills', isPage: true },
+    { key: 'projects', label: t('nav.projects'), href: '/#projects' },
+    { key: 'contact', label: t('nav.contact'), href: '/contact', isPage: true },
   ];
 
   return (
@@ -56,7 +59,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <img src={logoImg} alt="Hoang Duy Logo" className="h-16 md:h-20 w-auto object-contain" />
+          <img src={logoImg} alt="Dinh Thang Logo" className="h-16 md:h-20 w-auto object-contain" />
         </Link>
 
         {/* Desktop Nav */}
@@ -64,7 +67,7 @@ export default function Header() {
           {navItems.map((item) => (
             item.isPage ? (
               <Link
-                key={item.label}
+                key={item.key}
                 to={item.href}
                 onClick={() => setIsOpen(false)}
                 className="text-xs font-bold tracking-widest text-slate-600 hover:text-blue-600 transition-colors"
@@ -73,7 +76,7 @@ export default function Header() {
               </Link>
             ) : (
               <a 
-                key={item.label}
+                key={item.key}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item)}
                 className="text-xs font-bold tracking-widest text-slate-600 hover:text-blue-600 transition-colors"
@@ -84,24 +87,28 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Right CTA */}
-        <div className="hidden md:block">
+        {/* Right CTA & Language Switcher */}
+        <div className="hidden md:flex items-center space-x-4">
+          <LanguageSwitcher />
           <a
             href="#cv"
-            className="inline-flex items-center bg-slate-950 text-white px-5 py-2.5 text-xs font-bold tracking-widest rounded-md hover:bg-slate-800 hover:scale-[1.02] active:scale-[0.98] transition-all"
+            className="inline-flex items-center bg-slate-950 text-white px-5 py-2.5 text-xs font-bold tracking-widest rounded-md hover:bg-slate-800 hover:scale-[1.02] active:scale-[0.98] transition-all uppercase"
           >
-            DOWNLOAD CV
+            {t('nav.downloadCv')}
           </a>
         </div>
 
         {/* Mobile menu button */}
-        <button 
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-slate-700 hover:text-slate-900"
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex md:hidden items-center space-x-3">
+          <LanguageSwitcher />
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 text-slate-700 hover:text-slate-900"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav Overlay */}
@@ -110,7 +117,7 @@ export default function Header() {
           {navItems.map((item) => (
             item.isPage ? (
               <Link
-                key={item.label}
+                key={item.key}
                 to={item.href}
                 onClick={() => setIsOpen(false)}
                 className="text-xs font-bold tracking-widest text-slate-600 hover:text-blue-600 transition-colors w-full text-center py-2 block"
@@ -119,7 +126,7 @@ export default function Header() {
               </Link>
             ) : (
               <a 
-                key={item.label}
+                key={item.key}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item)}
                 className="text-xs font-bold tracking-widest text-slate-600 hover:text-blue-600 transition-colors w-full text-center py-2 block"
@@ -131,9 +138,9 @@ export default function Header() {
           <a
             href="#cv"
             onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-slate-950 text-white py-3 text-xs font-bold tracking-widest rounded-md hover:bg-slate-800 transition-all block"
+            className="w-full text-center bg-slate-950 text-white py-3 text-xs font-bold tracking-widest rounded-md hover:bg-slate-800 transition-all block uppercase"
           >
-            DOWNLOAD CV
+            {t('nav.downloadCv')}
           </a>
         </div>
       )}

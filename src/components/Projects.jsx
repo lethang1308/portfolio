@@ -1,11 +1,15 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { projects } from '../data/projects';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedProjects } from '../data/projects';
 import ScrollReveal from './animations/ScrollReveal';
 import StaggerContainer from './animations/StaggerContainer';
 
 export default function Projects() {
+  const { t, i18n } = useTranslation();
+  const projectsList = getLocalizedProjects(i18n.language);
+
   // Render custom tech mockups based on project id instead of relying on external images
   const renderTechMockup = (projectId) => {
     switch (projectId) {
@@ -104,17 +108,17 @@ export default function Projects() {
           <div className="flex items-end justify-between mb-12 w-full">
             <div>
               <h2 className="font-display font-bold text-3xl md:text-4xl text-slate-900 tracking-tight">
-                Featured Projects
+                {t('projects.featuredTitle')}
               </h2>
               <p className="text-slate-500 text-sm mt-2">
-                Production-ready API architectures and service layers.
+                {t('projects.featuredDesc')}
               </p>
             </div>
             <a 
               href="#projects" 
               className="hidden sm:inline-flex items-center space-x-1.5 text-xs font-bold tracking-wider text-blue-600 hover:text-blue-700 uppercase"
             >
-              <span>View all projects</span>
+              <span>{t('projects.viewAll')}</span>
               <ArrowRight size={14} />
             </a>
           </div>
@@ -126,7 +130,7 @@ export default function Projects() {
           direction="up"
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {projects.map((project) => (
+          {projectsList.map((project) => (
             <div 
               key={project.id}
               className="group flex flex-col bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
@@ -175,7 +179,7 @@ export default function Projects() {
                     to={`/project/${project.id}`}
                     className="inline-flex items-center space-x-1 text-xs font-bold tracking-widest text-slate-700 hover:text-blue-600 uppercase"
                   >
-                    <span>View Details</span>
+                    <span>{t('projects.viewDetails')}</span>
                     <ArrowRight size={12} className="transform group-hover:translate-x-1 transition-transform" />
                   </Link>
 
@@ -202,7 +206,7 @@ export default function Projects() {
             href="#projects" 
             className="inline-flex items-center space-x-1.5 text-xs font-bold tracking-wider text-blue-600 uppercase"
           >
-            <span>View all projects</span>
+            <span>{t('projects.viewAll')}</span>
             <ArrowRight size={14} />
           </a>
         </div>

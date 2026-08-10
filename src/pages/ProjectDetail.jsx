@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Database, Shield, Cpu, Code, Server, ArrowUpRight } from 'lucide-react';
-import { projects } from '../data/projects';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedProjects } from '../data/projects';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function ProjectDetail() {
   const { id } = useParams();
-  const project = projects.find((p) => p.id === id);
+  const { t, i18n } = useTranslation();
+  const localizedProjects = getLocalizedProjects(i18n.language);
+  const project = localizedProjects.find((p) => p.id === id);
 
   // Scroll to top on page load
   useEffect(() => {
@@ -18,13 +21,13 @@ export default function ProjectDetail() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#fafafa] px-6 text-center">
         <h1 className="text-6xl font-extrabold text-slate-900">404</h1>
-        <p className="text-xl text-slate-500 mt-4">Project not found</p>
+        <p className="text-xl text-slate-500 mt-4">{t('projectDetail.notFound')}</p>
         <Link 
           to="/" 
           className="mt-6 inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-all"
         >
           <ArrowLeft size={18} />
-          <span>Back to Home</span>
+          <span>{t('projectDetail.backToHome')}</span>
         </Link>
       </div>
     );
@@ -52,7 +55,7 @@ export default function ProjectDetail() {
               <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
                 <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
               </svg>
-              <span>Source Code</span>
+              <span>{t('projectDetail.sourceCode')}</span>
               <ArrowUpRight size={14} />
             </a>
           </div>
@@ -80,7 +83,7 @@ export default function ProjectDetail() {
               <Shield size={20} />
             </div>
             <h2 className="font-display font-bold text-xl text-slate-900">
-              Key System Features
+              {t('projectDetail.systemFeaturesTitle')}
             </h2>
           </div>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -102,7 +105,7 @@ export default function ProjectDetail() {
                 <Cpu size={20} />
               </div>
               <h2 className="font-display font-bold text-lg text-slate-900">
-                System Architecture
+                {t('projectDetail.systemArchitectureTitle')}
               </h2>
             </div>
             <p className="text-slate-500 text-xs md:text-sm leading-relaxed">
@@ -117,7 +120,7 @@ export default function ProjectDetail() {
                 <Database size={20} />
               </div>
               <h2 className="font-display font-bold text-lg text-slate-900">
-                Database Schema Design
+                {t('projectDetail.databaseDesignTitle')}
               </h2>
             </div>
             <p className="text-slate-500 text-xs md:text-sm leading-relaxed">
@@ -131,20 +134,20 @@ export default function ProjectDetail() {
           <div className="flex items-center justify-between border-b border-slate-900 pb-4">
             <div className="flex items-center space-x-3">
               <Server size={18} className="text-emerald-400" />
-              <span className="font-bold text-slate-100">Performance Metrics & Benchmarks</span>
+              <span className="font-bold text-slate-100">{t('projectDetail.perfMetricsTitle')}</span>
             </div>
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-sans">
             <div className="bg-slate-900/60 p-4 rounded-xl border border-slate-900 space-y-1">
-              <div className="text-slate-400 text-xs font-semibold uppercase tracking-wider">Caching Layer</div>
+              <div className="text-slate-400 text-xs font-semibold uppercase tracking-wider">{t('projectDetail.cachingLayer')}</div>
               <p className="text-slate-300 text-sm leading-relaxed font-mono mt-2">
                 {project.performance.caching}
               </p>
             </div>
             <div className="bg-slate-900/60 p-4 rounded-xl border border-slate-900 space-y-1">
-              <div className="text-slate-400 text-xs font-semibold uppercase tracking-wider">Load Simulation</div>
+              <div className="text-slate-400 text-xs font-semibold uppercase tracking-wider">{t('projectDetail.loadSimulation')}</div>
               <p className="text-slate-300 text-sm leading-relaxed font-mono mt-2">
                 {project.performance.loadTesting}
               </p>
@@ -159,7 +162,7 @@ export default function ProjectDetail() {
               <Code size={20} />
             </div>
             <h2 className="font-display font-bold text-xl text-slate-900">
-              Core API Endpoint Documentation
+              {t('projectDetail.apiEndpointDocTitle')}
             </h2>
           </div>
           
@@ -167,9 +170,9 @@ export default function ProjectDetail() {
             <table className="w-full text-left text-xs md:text-sm border-collapse">
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-100">
-                  <th className="p-4 font-bold text-slate-700 w-24">Method</th>
-                  <th className="p-4 font-bold text-slate-700 w-48">Endpoint</th>
-                  <th className="p-4 font-bold text-slate-700">Description</th>
+                  <th className="p-4 font-bold text-slate-700 w-24">{t('projectDetail.tableMethod')}</th>
+                  <th className="p-4 font-bold text-slate-700 w-48">{t('projectDetail.tableEndpoint')}</th>
+                  <th className="p-4 font-bold text-slate-700">{t('projectDetail.tableDesc')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-50">
