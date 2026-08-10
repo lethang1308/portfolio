@@ -33,7 +33,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="py-12 bg-white border-t border-slate-50">
+    <footer className="py-12 bg-white/40 backdrop-blur-sm border-t border-slate-200/50">
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center space-y-6">
         
         {/* Social Icons Row */}

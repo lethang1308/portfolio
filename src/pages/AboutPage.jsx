@@ -110,7 +110,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafafa] flex flex-col justify-between font-sans pt-28 md:pt-36">
+    <div className="min-h-screen bg-transparent flex flex-col justify-between font-sans pt-28 md:pt-36">
       
       {/* Navigation */}
       <Header />

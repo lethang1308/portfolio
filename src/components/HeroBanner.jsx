@@ -19,7 +19,7 @@ export default function HeroBanner() {
   return (
     <section 
       ref={heroRef}
-      className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-white w-full select-none"
+      className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-transparent w-full select-none"
     >
       {/* Interactive Particle Background Canvas */}
       <ParticleBackground mouseRef={mouseRef} />

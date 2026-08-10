@@ -28,6 +28,7 @@ export default function SkillsPage() {
 
   const categories = [
     { id: 'All', label: t('skillsPage.categories.All'), icon: <LayoutGrid size={16} /> },
+    { id: 'Frontend', label: t('skillsPage.categories.Frontend'), icon: <LayoutGrid size={16} /> },
     { id: 'Backend', label: t('skillsPage.categories.Backend'), icon: <Server size={16} /> },
     { id: 'Database', label: t('skillsPage.categories.Database'), icon: <Database size={16} /> },
     { id: 'DevOps', label: t('skillsPage.categories.DevOps'), icon: <Cloud size={16} /> },
@@ -35,6 +36,72 @@ export default function SkillsPage() {
   ];
 
   const coreSkills = [
+    {
+      name: "React",
+      category: "Frontend",
+      description: t('skillsPage.skillDescriptions.React'),
+      rating: 5,
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#61dafb]" fill="currentColor">
+          <path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0-5c-4.97 0-9 1.79-9 4s4.03 4 9 4 9-1.79 9-4-4.03-4-9-4zm0 6c-3.87 0-7-1.12-7-2s3.13-2 7-2 7 1.12 7 2-3.13 2-7 2zm-7.78 7.5c-2.48 4.31-1.1 7.23.9 8.38 2 1.16 5.58-.29 8.07-3.24-3.41-.6-6.42-2.34-8.97-5.14zm1.74-1c2.25 2.47 4.9 4 7.9 4.5-.47.88-1 1.7-1.59 2.42-2.18 2.58-4.93 3.69-6.31 2.9-1.38-.8-1.57-3.23.36-6.82zm13.82-4.14c-2.55 2.8-5.56 4.54-8.97 5.14 2.49 2.95 6.07 4.4 8.07 3.24 2-1.15 3.38-4.07.9-8.38zm-3.66 9.52c-1.38.79-4.13-.32-6.31-2.9-.59-.72-1.12-1.54-1.59-2.42 3-.5 5.65-2.03 7.9-4.5 1.93 3.59 1.74 6.02.36 6.82z"/>
+        </svg>
+      )
+    },
+    {
+      name: "Angular",
+      category: "Frontend",
+      description: t('skillsPage.skillDescriptions.Angular'),
+      rating: 4,
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#dd0031]" fill="currentColor">
+          <path d="M12 2.5L2.8 5.8l1.4 12.2L12 21.5l7.8-3.5 1.4-12.2L12 2.5zm0 3l5.3 12.2H15l-1.1-2.7H10.1L9 17.7H6.7L12 5.5zm1.5 7L12 8.7 10.5 12.5h3z"/>
+        </svg>
+      )
+    },
+    {
+      name: "TypeScript",
+      category: "Frontend",
+      description: t('skillsPage.skillDescriptions.TypeScript'),
+      rating: 5,
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#3178c6]" fill="currentColor">
+          <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0H1.125zm17.363 9.75c.612 0 1.154.037 1.627.111.473.075.908.216 1.305.422v2.738a5.213 5.213 0 0 0-1.378-.478 7.37 7.37 0 0 0-1.425-.131c-.507 0-.89.08-1.149.24-.258.16-.388.403-.388.731 0 .225.07.413.211.563.14.149.347.28.619.393.272.113.614.23.1026.352.412.122.848.271 1.308.449.46.179.872.417 1.238.713.365.295.647.665.844 1.111.197.445.295 1.003.295 1.673 0 .76-.178 1.416-.534 1.969-.357.553-.848.975-1.472 1.266-.624.29-1.359.435-2.208.435-.769 0-1.505-.084-2.208-.253a9.803 9.803 0 0 1-1.922-.703v-2.925c.684.441 1.406.778 2.166 1.012.759.234 1.444.352 2.053.352.516 0 .914-.089 1.195-.267.282-.178.422-.44.422-.788 0-.253-.085-.46-.253-.619-.169-.159-.398-.295-.689-.408-.291-.112-.642-.225-1.055-.337a10.875 10.875 0 0 1-1.308-.436 4.398 4.398 0 0 1-1.214-.712 2.766 2.766 0 0 1-.811-1.102c-.183-.436-.274-.97-.274-1.603 0-.741.173-1.378.52-1.913.347-.534.825-.942 1.434-1.223.61-.282 1.327-.422 2.152-.422zm-6.6 0v2.625h-3.3v10.875H5.4V12.375h-3.3V9.75h9.75z"/>
+        </svg>
+      )
+    },
+    {
+      name: "Tailwind CSS",
+      category: "Frontend",
+      description: t('skillsPage.skillDescriptions.Tailwind CSS'),
+      rating: 5,
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#38bdf8]" fill="currentColor">
+          <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19.2 12.001 19.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+        </svg>
+      )
+    },
+    {
+      name: "Laravel",
+      category: "Backend",
+      description: t('skillsPage.skillDescriptions.Laravel'),
+      rating: 5,
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#ff2d20]" fill="currentColor">
+          <path d="M12 1.5L2.5 5.5v7c0 5.25 4 10 9.5 11 5.5-1 9.5-5.75 9.5-11v-7L12 1.5zm6 11c0 3.75-2.5 7-6 8-3.5-1-6-4.25-6-8V7.25l6-2.5 6 2.5V12.5z"/>
+        </svg>
+      )
+    },
+    {
+      name: "PHP",
+      category: "Backend",
+      description: t('skillsPage.skillDescriptions.PHP'),
+      rating: 5,
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#777bb4]" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2v-5h2v5z"/>
+        </svg>
+      )
+    },
     {
       name: "Node.js",
       category: "Backend",
@@ -47,60 +114,13 @@ export default function SkillsPage() {
       )
     },
     {
-      name: "NestJS",
-      category: "Backend",
-      description: t('skillsPage.skillDescriptions.NestJS'),
-      rating: 5,
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#ea2849]" fill="currentColor">
-          <path d="M12 1.5L2.5 5.5v7c0 5.25 4 10 9.5 11 5.5-1 9.5-5.75 9.5-11v-7L12 1.5zm6 11c0 3.75-2.5 7-6 8-3.5-1-6-4.25-6-8V7.25l6-2.5 6 2.5V12.5z M12 6.5l-4 3.5h3v4h2v-4h3l-4-3.5z"/>
-        </svg>
-      )
-    },
-    {
-      name: "Express",
-      category: "Backend",
-      description: t('skillsPage.skillDescriptions.Express'),
-      rating: 4,
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-slate-800" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M8 12h8" />
-          <path d="M12 8v8" />
-          <text x="8" y="15" fill="currentColor" stroke="none" fontSize="8" fontWeight="bold">EX</text>
-        </svg>
-      )
-    },
-    {
-      name: "PostgreSQL",
-      category: "Database",
-      description: t('skillsPage.skillDescriptions.PostgreSQL'),
-      rating: 5,
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#336791]" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.5h-2v-2h2v2zm0-4h-2v-5h2v5z"/>
-        </svg>
-      )
-    },
-    {
       name: "MySQL",
       category: "Database",
       description: t('skillsPage.skillDescriptions.MySQL'),
-      rating: 4,
+      rating: 5,
       icon: (
         <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#00758f]" fill="currentColor">
           <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v7.029C18.31 21.164 22 17.013 22 12c0-5.523-4.477-10-10-10z"/>
-        </svg>
-      )
-    },
-    {
-      name: "MongoDB",
-      category: "Database",
-      description: t('skillsPage.skillDescriptions.MongoDB'),
-      rating: 4,
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-[#13aa52]" fill="currentColor">
-          <path d="M12 2a9.96 9.96 0 0 0-4.7 1.2c-.3.2-.3.6 0 .8.8.5 1.5 1.1 2.2 1.8.8.8 1.4 1.8 1.8 2.8.4-1 .9-2 1.8-2.8a12.8 12.8 0 0 1 2.2-1.8c.3-.2.3-.6 0-.8A9.96 9.96 0 0 0 12 2zm-2.4 8.7c-.1-.7-.1-1.5 0-2.2-.4.6-.7 1.3-.9 2 .2.1.6.2.9.2zm4.8 0c.3 0 .7-.1.9-.2-.2-.7-.5-1.4-.9-2 .1.7.1 1.5 0 2.2zM12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/>
         </svg>
       )
     },
@@ -138,19 +158,6 @@ export default function SkillsPage() {
       )
     },
     {
-      name: "JWT Auth",
-      category: "Architecture",
-      description: t('skillsPage.skillDescriptions.JWT Auth'),
-      rating: 4,
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-          <circle cx="12" cy="16" r="1" />
-        </svg>
-      )
-    },
-    {
       name: "REST API",
       category: "Architecture",
       description: t('skillsPage.skillDescriptions.REST API'),
@@ -162,24 +169,6 @@ export default function SkillsPage() {
           <line x1="12" y1="4" x2="12" y2="20" />
         </svg>
       )
-    },
-    {
-      name: "System Design",
-      category: "Architecture",
-      description: t('skillsPage.skillDescriptions.System Design'),
-      rating: 5,
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="3" width="7" height="7" />
-          <rect x="14" y="3" width="7" height="7" />
-          <rect x="14" y="14" width="7" height="7" />
-          <rect x="3" y="14" width="7" height="7" />
-          <line x1="7" y1="10" x2="7" y2="14" />
-          <line x1="10" y1="7" x2="14" y2="7" />
-          <line x1="14" y1="17" x2="10" y2="17" />
-          <line x1="17" y1="10" x2="17" y2="14" />
-        </svg>
-      )
     }
   ];
 
@@ -188,11 +177,11 @@ export default function SkillsPage() {
     : coreSkills.filter(skill => skill.category === activeCategory);
 
   const currentlyUsing = [
-    { name: "Node.js", icon: coreSkills[0].icon },
-    { name: "NestJS", icon: coreSkills[1].icon },
-    { name: "PostgreSQL", icon: coreSkills[3].icon },
-    { name: "Docker", icon: coreSkills[7].icon },
-    { name: "Git", icon: coreSkills[8].icon }
+    { name: "React", icon: coreSkills[0].icon },
+    { name: "Laravel", icon: coreSkills[4].icon },
+    { name: "MySQL", icon: coreSkills[7].icon },
+    { name: "Tailwind CSS", icon: coreSkills[3].icon },
+    { name: "TypeScript", icon: coreSkills[2].icon }
   ];
 
   const learningExploring = [
@@ -229,7 +218,7 @@ export default function SkillsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafafa] flex flex-col justify-between font-sans pt-28 md:pt-36">
+    <div className="min-h-screen bg-transparent flex flex-col justify-between font-sans pt-28 md:pt-36">
       
       {/* Navigation */}
       <Header />

@@ -7,13 +7,13 @@ export default function Contact() {
   const { t } = useTranslation();
 
   return (
-    <section id="contact" className="py-16 bg-white">
+    <section id="contact" className="py-16 bg-transparent">
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal 
           direction="none" 
           delay={200} 
           duration={700}
-          className="bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 hover:shadow-xl hover:shadow-slate-100/50 transition-all duration-300 w-full"
+          className="bg-white/80 backdrop-blur-md border border-slate-100 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 hover:shadow-xl hover:shadow-slate-100/50 transition-all duration-300 w-full"
         >
           {/* Left Text Column */}
           <div className="text-center md:text-left space-y-2">

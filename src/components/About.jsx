@@ -27,7 +27,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white border-t border-slate-50">
+    <section id="about" className="py-20 bg-transparent border-t border-slate-100/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
           

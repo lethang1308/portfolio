@@ -7,73 +7,73 @@
     "downloadCv": "DOWNLOAD CV"
   },
   "hero": {
-    "badge": "BACKEND DEVELOPER",
+    "badge": "FULL STACK DEVELOPER",
     "greeting": "Hello, I'm",
     "name": "Dinh Thang",
-    "description": "I build reliable backend systems and APIs that solve real-world problems. Focused on database optimization, clean architecture, and highly performant codebases.",
+    "description": "I build end-to-end web & mobile applications, linking intuitive user interfaces with scalable backend architectures, APIs, and databases.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me"
   },
   "about": {
     "title": "About Me",
-    "p1": "I'm a backend developer with a strong passion for building scalable applications and designing clean, maintainable code. I enjoy working with modern technologies and solving challenging architectural and algorithmic problems.",
-    "p2": "My expertise covers designing RESTful and GraphQL APIs, optimizing database queries, managing containerized workloads, and implementing secure authentication mechanisms.",
+    "p1": "I'm a full stack developer passionate about creating complete digital products—from responsive frontend interfaces (React, Angular, Tailwind CSS) to robust backend APIs (PHP/Laravel, Node.js, MySQL, Redis).",
+    "p2": "My expertise spans across designing intuitive client experiences, architecting RESTful services, database optimization, multi-store systems, and automated deployments.",
     "exp": "3+ Years Experience",
     "available": "Available for new opportunities",
     "location": "Ho Chi Minh City, Vietnam"
   },
   "aboutPage": {
     "title": "About Me",
-    "subtitle": "Backend developer passionate about building reliable, scalable and secure systems.",
-    "role": "Backend Developer",
+    "subtitle": "Full Stack developer building seamless frontend experiences and robust backend architectures.",
+    "role": "Full Stack Developer",
     "location": "Ho Chi Minh City, Vietnam",
     "status": "Available for opportunities",
     "storyTitle": "My Story",
-    "storyP1": "I'm a backend developer who loves turning complex business ideas into robust, scalable, and resilient systems. My journey started with a strong curiosity about how information flows behind the scenes—from raw web requests down to databases, caching queues, and background jobs.",
-    "storyP2": "Over the years, I've built and optimized secure APIs, structured microservices, and designed high-throughput database models that serve thousands of active users. I enjoy solving complex algorithmic bottlenecks, tweaking database query planners, and writing testable and maintainable code.",
-    "storyP3": "When I'm not writing code, you can find me reading architectural design patterns, experimenting with server operations, or exploring open source backend projects.",
+    "storyP1": "I'm a full stack developer who enjoys building complete digital solutions. My journey spans constructing rich client-side applications as well as designing scalable backend infrastructures, databases, and background services.",
+    "storyP2": "Over the years, I've developed and deployed multi-store e-commerce platforms, recruitment apps, travel booking engines, and customized CMS applications using PHP (Laravel), Node.js, React, Angular/Ionic, and Tailwind CSS.",
+    "storyP3": "When I'm not writing code, you can find me exploring UI/UX trends, optimizing database query planners, or building cross-platform mini apps.",
     "principlesTitle": "My Principles",
     "principles": [
-      "Write clean, maintainable and tested code",
-      "Design for scale and future changes",
-      "Automate everything that can be automated",
-      "Measure, observe and improve continuously",
-      "Security and reliability by design"
+      "Deliver seamless user experience backed by scalable code",
+      "Write clean, maintainable, and modular fullstack architectures",
+      "Automate background workers, queues, and deployments",
+      "Continuously measure, observe, and optimize performance",
+      "Enforce security and reliability across every application layer"
     ],
-    "journeyTitle": "Backend Journey",
+    "journeyTitle": "Fullstack Journey",
     "journey": [
-      { "year": "2019", "title": "Started my journey with Python and Django. Built my first REST API." },
-      { "year": "2020", "title": "Discovered Node.js / Express and fell in love with asynchronous programming." },
-      { "year": "2021", "title": "Started working with Docker, microservices, and cluster architectures." },
-      { "year": "2022", "title": "Focused on database scalability, caching optimization (Redis), and observability." },
-      { "year": "2023+", "title": "Building reliable platforms, mentoring junior developers, and contributing to open source." }
+      { "year": "2019", "title": "Started my web development journey with HTML/CSS, JavaScript, PHP, and MySQL." },
+      { "year": "2020", "title": "Mastered Laravel framework and built custom CMS platforms and e-commerce backends." },
+      { "year": "2021", "title": "Expanded into Frontend SPA frameworks (React.js, Angular, TypeScript) and Tailwind CSS." },
+      { "year": "2022", "title": "Built cross-platform apps (Ionic Framework, Zalo Mini App SDK) and Redis caching layers." },
+      { "year": "2023+", "title": "Engineering fullstack ecosystems, multi-store platforms, and high-performance Web & Mobile applications." }
     ],
-    "buildSystemsTitle": "How I Build Systems",
+    "buildSystemsTitle": "How I Build Fullstack Systems",
     "buildSystems": [
-      { "title": "API Design", "desc": "RESTful and gRPC APIs with clarity and versioning." },
-      { "title": "Authentication", "desc": "Secure auth with JWT, OAuth2 and RBAC." },
-      { "title": "Database Design", "desc": "Normalized schemas, indexes and query optimization." },
-      { "title": "Caching", "desc": "Redis for caching, sessions and rate limiting." },
-      { "title": "Observability", "desc": "Logs, metrics and tracing for actionable insights." },
-      { "title": "Deployment", "desc": "CI/CD pipelines, containerized and automated." }
+      { "title": "Frontend Development", "desc": "Interactive, responsive UI with React, Angular, Zalo Mini App, and Tailwind CSS." },
+      { "title": "API & Backend Architecture", "desc": "RESTful services and microservices using PHP/Laravel and Node.js." },
+      { "title": "Database Engineering", "desc": "Normalized schemas, complex indexing, and transactions in MySQL & PostgreSQL." },
+      { "title": "State & Cache Management", "desc": "Client-side state management (TanStack Query, Jotai) combined with Redis caching." },
+      { "title": "Mobile & Cross-Platform", "desc": "Building hybrid mobile and mini apps using Ionic Framework and ZMP SDK." },
+      { "title": "Deployment & DevOps", "desc": "Containerized setups with Docker, Git workflows, and CI/CD pipelines." }
     ],
     "favoriteTechTitle": "Favorite Technologies",
     "achievementsTitle": "Achievements",
     "achievements": {
-      "projects": "Projects Built",
-      "openSource": "OS Contribs",
+      "projects": "Fullstack Projects",
+      "openSource": "OS Repositories",
       "experience": "Years Exp",
-      "rps": "RPS Handled/Day"
+      "rps": "Users Served/Day"
     },
     "focusedTitle": "Currently Focused On",
     "focusAreas": [
-      { "title": "Microservices", "desc": "Building scalable and loosely coupled services." },
-      { "title": "Performance Optimization", "desc": "Improving latency, throughput and resource usage." },
-      { "title": "Clean Architecture", "desc": "Building maintainable and testable backend systems." },
-      { "title": "Security Best Practices", "desc": "Implementing security at every layer of the system." }
+      { "title": "Fullstack Ecosystems", "desc": "Seamless integration between client apps and backend APIs." },
+      { "title": "Zalo & Mobile Mini Apps", "desc": "High-performance mini apps built with ZMP SDK, React, and TypeScript." },
+      { "title": "Scalable E-Commerce & CMS", "desc": "Multi-store architecture, flash sales, and modular content management." },
+      { "title": "Performance Tuning", "desc": "Optimizing asset bundles, API latency, and database query executions." }
     ],
     "ctaTitle": "Let's build something impactful together",
-    "ctaDesc": "I'm open to exciting opportunities, architectural reviews, and engineering collaborations.",
+    "ctaDesc": "I'm open to fullstack opportunities, web & mobile app engineering, and technical collaborations.",
     "ctaProjects": "View My Projects",
     "ctaContact": "Get In Touch"
   },
@@ -84,6 +84,7 @@
     "title": "Skills",
     "categories": {
       "All": "All",
+      "Frontend": "Frontend",
       "Backend": "Backend",
       "Database": "Database",
       "DevOps": "DevOps",
@@ -91,74 +92,89 @@
     },
     "coreSkillsTitle": "Core Skills",
     "skillDescriptions": {
-      "Node.js": "JavaScript runtime for scalable apps",
-      "NestJS": "Progressive Node.js framework",
-      "Express": "Fast, unopinionated web framework",
-      "PostgreSQL": "Advanced relational database",
-      "MySQL": "Reliable relational database",
-      "MongoDB": "NoSQL document database",
-      "Redis": "In-memory data structure store",
-      "Docker": "Containerization platform",
-      "Git": "Version control system",
-      "JWT Auth": "Secure authentication with JWT",
-      "REST API": "Design & build RESTful services",
-      "System Design": "Scalable & reliable system architecture"
+      "React": "Modern UI library for building interactive user interfaces",
+      "Angular": "Robust framework for enterprise frontend applications",
+      "TypeScript": "Strongly typed JavaScript for scalable web development",
+      "Tailwind CSS": "Utility-first CSS framework for custom responsive design",
+      "PHP": "Popular server-side scripting language for web platforms",
+      "Laravel": "Elegant PHP web framework for robust backend APIs",
+      "Node.js": "JavaScript runtime for scalable server applications",
+      "Express": "Fast, unopinionated Node.js web framework",
+      "MySQL": "Reliable relational database management system",
+      "PostgreSQL": "Advanced open-source relational database",
+      "Redis": "In-memory data structure store for caching & queues",
+      "Docker": "Containerization platform for application deployment",
+      "Git": "Distributed version control system",
+      "REST API": "Design & build scalable RESTful web services"
     },
     "currentlyUsingTitle": "Currently using most",
     "viewWorkflow": "View workflow",
     "learningExploringTitle": "Learning / Exploring",
     "viewRoadmap": "View roadmap",
     "learningSkills": {
-      "Kafka": "Event streaming platform",
-      "AWS": "Cloud services & deployment",
-      "GraphQL": "Query language for APIs"
+      "Next.js": "React framework for production & SSR",
+      "AWS": "Cloud infrastructure & deployment",
+      "GraphQL": "Flexible query language for APIs"
     }
   },
   "projects": {
     "featuredTitle": "Featured Projects",
-    "featuredDesc": "Production-ready API architectures and service layers.",
+    "featuredDesc": "Fullstack web applications, Zalo Mini Apps, and enterprise REST APIs.",
     "viewAll": "View all projects",
-    "viewDetails": "View Details"
+    "viewProject": "View Project Details",
+    "sourceCode": "Source Code",
+    "liveDemo": "Live Demo"
   },
   "projectDetail": {
-    "notFound": "Project not found",
+    "backToProjects": "Back to Projects",
     "backToHome": "Back to Home",
+    "notFound": "Project Not Found",
     "sourceCode": "Source Code",
-    "systemFeaturesTitle": "Key System Features",
+    "systemFeaturesTitle": "Key Features & Functionalities",
     "systemArchitectureTitle": "System Architecture",
-    "databaseDesignTitle": "Database Schema Design",
-    "perfMetricsTitle": "Performance Metrics & Benchmarks",
-    "cachingLayer": "Caching Layer",
-    "loadSimulation": "Load Simulation",
-    "apiEndpointDocTitle": "Core API Endpoint Documentation",
+    "databaseDesignTitle": "Database Design & Indexing",
+    "perfMetricsTitle": "Performance Metrics & Optimization Log",
+    "cachingLayer": "Caching Layer & Strategy",
+    "loadSimulation": "Load Simulation & Throughput",
+    "apiEndpointDocTitle": "API Endpoint Documentation",
     "tableMethod": "Method",
-    "tableEndpoint": "Endpoint",
-    "tableDesc": "Description"
+    "tableEndpoint": "Endpoint Path",
+    "tableDesc": "Description",
+    "interestedTitle": "Interested in building a project like this?",
+    "interestedDesc": "I can help you design, develop, and deploy your custom fullstack application from start to finish.",
+    "contactBtn": "Let's Talk"
   },
   "contact": {
     "interestedTitle": "Interested in working together?",
-    "interestedDesc": "I'm always open to discussing new projects, APIs architecture design, system optimization, or full-time opportunities.",
+    "interestedDesc": "I'm available for fullstack development roles, custom web/mobile projects, and technical consultations.",
     "contactMe": "Contact Me"
   },
   "contactPage": {
-    "badge": "CONTACT",
-    "title": "Let's Connect",
-    "desc": "Have a project in mind or want to say hi? Feel free to reach out to me.",
+    "badge": "LET'S CONNECT",
+    "title": "Get In Touch",
+    "subtitle": "Have a project in mind or want to discuss a fullstack opportunity? Feel free to reach out!",
+    "desc": "Have a project in mind or want to discuss a fullstack opportunity? Feel free to reach out!",
     "labels": {
       "email": "Email",
       "location": "Location",
       "phone": "Phone",
-      "availability": "Availability",
-      "name": "Your Name",
-      "emailInput": "Your Email",
-      "subject": "Subject",
-      "message": "Your Message"
+      "availability": "Status",
+      "name": "YOUR NAME",
+      "emailInput": "EMAIL ADDRESS",
+      "subject": "SUBJECT",
+      "message": "YOUR MESSAGE"
+    },
+    "placeholders": {
+      "name": "e.g. John Doe",
+      "email": "name@example.com",
+      "subject": "Project Inquiry...",
+      "message": "Write your message here..."
     },
     "values": {
       "location": "Ho Chi Minh City, Vietnam",
-      "availability": "Open for new opportunities"
+      "availability": "Available for full-time & freelance projects"
     },
-    "placeholders": {
+    "form": {
       "name": "Your Name",
       "email": "Your Email",
       "subject": "Subject",
@@ -168,7 +184,7 @@
     "messageSentTitle": "Message Sent!",
     "messageSentDesc": "Thank you for reaching out. Dinh Thang will get back to you shortly.",
     "connectTitle": "Connect with me",
-    "connectDesc": "Let's stay in touch on these platforms."
+    "connectDesc": "Let me know about your idea or project."
   },
   "footer": {
     "rights": "Dinh Thang. All rights reserved."

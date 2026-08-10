@@ -19,7 +19,7 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-[#fafafa] px-6 text-center">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-transparent px-6 text-center">
         <h1 className="text-6xl font-extrabold text-slate-900">404</h1>
         <p className="text-xl text-slate-500 mt-4">{t('projectDetail.notFound')}</p>
         <Link 
@@ -34,7 +34,7 @@ export default function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fafafa] flex flex-col justify-between font-sans pt-28 md:pt-36">
+    <div className="min-h-screen bg-transparent flex flex-col justify-between font-sans pt-28 md:pt-36">
       {/* Navigation */}
       <Header />
 
@@ -75,6 +75,17 @@ export default function ProjectDetail() {
             ))}
           </div>
         </div>
+
+        {/* Project Image Preview Banner */}
+        {project.image && (
+          <div className="w-full h-64 md:h-96 rounded-3xl overflow-hidden shadow-lg border border-slate-100/80 relative">
+            <img 
+              src={project.image} 
+              alt={project.title} 
+              className="w-full h-full object-cover object-top" 
+            />
+          </div>
+        )}
 
         {/* Features Card Section */}
         <div className="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm">

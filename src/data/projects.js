@@ -1,182 +1,304 @@
+import ecoluckImg from '../assets/ecoluck.jpg';
+import jobgogoImg from '../assets/jobgogo.jpg';
+import travelImg from '../assets/travel.jpg';
+import tinocmsImg from '../assets/tinocms.jpg';
+import biolinkImg from '../assets/biolink.jpg';
+
 export const projectsData = [
   {
-    id: "ecommerce-api",
+    id: "ecoluck-platform",
+    image: ecoluckImg,
     title: {
-      en: "E-Commerce API",
-      vi: "E-Commerce API"
+      en: "EcoLuck — Fullstack E-Commerce & Rewards Platform",
+      vi: "EcoLuck — Nền Tảng Mua Sắm & Nhận Thưởng Fullstack"
     },
     shortDescription: {
-      en: "RESTful API for e-commerce platform with full features.",
-      vi: "RESTful API cho nền tảng thương mại điện tử với đầy đủ tính năng."
+      en: "Fullstack E-Commerce Zalo Mini App with multi-store backend engine.",
+      vi: "Hệ thống mua sắm Zalo Mini App tích hợp Backend quản trị đa cửa hàng."
     },
     description: {
-      en: "A highly scalable and feature-rich RESTful API designed to power modern e-commerce storefronts. This system handles complex product catalogs, secure shopping cart workflows, dynamic pricing, and transactional order management.",
-      vi: "Hệ thống RESTful API có khả năng mở rộng cao và giàu tính năng được thiết kế cho các trang thương mại điện tử hiện đại. Hệ thống xử lý danh mục sản phẩm phức tạp, quy trình giỏ hàng bảo mật, tính giá linh hoạt và quản lý đơn hàng giao dịch."
+      en: "A comprehensive fullstack e-commerce and reward ecosystem. Built with Zalo Mini App SDK (React + TypeScript + TanStack Query) on the frontend and a high-performance Laravel + Redis + MySQL engine on the backend. Features multi-store context switching, flash sales, affiliate registration, lucky ticket draws, and real-time inventory management.",
+      vi: "Hệ sinh thái mua sắm và nhận thưởng fullstack toàn diện. Sử dụng Zalo Mini App SDK (React + TypeScript + TanStack Query) phía Frontend và nền tảng Laravel + Redis + MySQL phía Backend. Tích hợp chuyển đổi đa cửa hàng, chương trình Flash Sale, affiliate giới thiệu, vòng quay may mắn và quản lý kho hàng thời gian thực."
     },
-    techStack: ["Node.js", "Express.js", "MongoDB", "Mongoose", "Redis", "JWT", "Stripe"],
-    githubUrl: "https://github.com/dinhthang-dev/ecommerce-api",
+    techStack: ["React 18", "TypeScript", "ZMP SDK", "TanStack Query", "Laravel", "MySQL", "Redis", "Tailwind CSS"],
+    githubUrl: "https://github.com/dinhthang-dev/ecoluck-fullstack",
     features: {
       en: [
-        "JWT-based Authentication & Role-Based Access Control (Admin, Seller, Customer)",
-        "Product Catalog with filtering, sorting, pagination, and fuzzy search",
-        "Real-time Shopping Cart & Wishlist persistence",
-        "Stripe payment gateway integration with webhooks for order verification",
-        "Inventory management with stock auto-decrement and race-condition safety",
-        "Automated invoice generation and email notifications via Nodemailer"
+        "Cross-platform Zalo Mini App client with native hardware and authentication integration",
+        "Multi-Store Admin CRM with store context switching and operating hours control",
+        "Real-time Inventory & Variant Stock management with atomic lock safety",
+        "Flash Sale homepage engine with countdown timer and stock reservation",
+        "Affiliate Partner registration and automated tier commission tracking",
+        "Lucky Ticket gift draws & reward ticket distribution module"
       ],
       vi: [
-        "Xác thực qua JWT & Phân quyền chi tiết (Quản trị viên, Người bán, Khách hàng)",
-        "Danh mục sản phẩm với bộ lọc, sắp xếp, phân trang và tìm kiếm mờ (fuzzy search)",
-        "Giỏ hàng & Danh sách yêu thích được đồng bộ và lưu trữ thời gian thực",
-        "Tích hợp cổng thanh toán Stripe với webhook xác minh đơn hàng tự động",
-        "Quản lý kho hàng tự động trừ tồn kho và phòng chống xung đột giao dịch (race-condition)",
-        "Tự động xuất hóa đơn và gửi email thông báo qua Nodemailer"
+        "Client Zalo Mini App mượt mà kết hợp xác thực và phần cứng thiết bị",
+        "Trang quản trị CRM đa cửa hàng (Multi-store) linh hoạt thay đổi ngữ cảnh cửa hàng",
+        "Quản lý tồn kho biến thể thời gian thực chống xung đột đơn hàng (Race condition)",
+        "Engine Flash Sale trang chủ với bộ đếm ngược và giữ hàng tạm thời",
+        "Hệ thống đăng ký Affiliate đối tác và tự động tính hoa hồng phân cấp",
+        "Vòng quay vé may mắn và mô-đun phát quà thưởng tự động"
       ]
     },
     architecture: {
-      en: "Clean Architecture (Separation of Concerns between Routes, Controllers, Services, and Repositories). Implemented custom middleware for validation (Joi) and error handling.",
-      vi: "Kiến trúc Clean Architecture (Phân tách rõ ràng giữa Routes, Controllers, Services và Repositories). Triển khai middleware tùy chỉnh để validate dữ liệu (Joi) và xử lý lỗi tập trung."
+      en: "Decoupled Architecture: Client layer built with React, Jotai, and TanStack Query connecting via RESTful JSON APIs to a modular Laravel Service-Repository backend. Caching strategy powered by Redis.",
+      vi: "Kiến trúc tách biệt (Decoupled): Tầng Client viết bằng React, Jotai và TanStack Query giao tiếp qua RESTful JSON API với hệ thống Laravel Service-Repository phía máy chủ. Caching tối ưu bằng Redis."
     },
     databaseDesign: {
-      en: "Document-oriented database design using MongoDB. Heavy usage of compound indexing on product attributes (name, category, price) to support fast search queries. References used for orders and users, while product reviews are embedded for optimal read performance.",
-      vi: "Thiết kế cơ sở dữ liệu hướng tài liệu sử dụng MongoDB. Sử dụng chỉ mục hỗn hợp (compound indexing) trên các thuộc tính sản phẩm (tên, danh mục, giá) để tối ưu tốc độ tìm kiếm. Liên kết tham chiếu cho đơn hàng và người dùng, trong khi đánh giá sản phẩm được nhúng trực tiếp để đạt hiệu năng đọc tốt nhất."
+      en: "Relational MySQL database schema with multi-tenant store_id indexing, compound indexes on product variants, transactional SLA order logs, and risk/rejection auditing tables.",
+      vi: "Schema MySQL quan hệ lưu trữ chỉ mục store_id đa cửa hàng, chỉ mục hỗn hợp cho biến thể sản phẩm, nhật ký SLA đơn hàng và bảng kiểm duyệt rủi ro hủy đơn."
     },
     performance: {
       caching: {
-        en: "Redis cache implemented for high-traffic product listings and category queries, reducing database read load by 60%.",
-        vi: "Triển khai bộ nhớ đệm Redis cho danh sách sản phẩm truy cập cao và truy vấn danh mục, giảm 60% tải đọc vào cơ sở dữ liệu."
+        en: "Redis caching applied to flash sale home listings and store status, maintaining sub-30ms response times for high-concurrency requests.",
+        vi: "Bộ nhớ đệm Redis lưu trữ danh sách Flash Sale và trạng thái cửa hàng, duy trì độ trễ phản hồi dưới 30ms cho các truy vấn tải cao."
       },
       loadTesting: {
-        en: "Tested with autocannon, maintaining a stable 850 requests/sec with an average response time of 45ms under a load of 10,000 concurrent users.",
-        vi: "Kiểm thử tải bằng Autocannon, duy trì ổn định 850 yêu cầu/giây với thời gian phản hồi trung bình 45ms dưới mức tải 10,000 người dùng đồng thời."
+        en: "Tested under heavy traffic, sustaining 1,200 requests/sec with seamless ZMP client state revalidation.",
+        vi: "Thử nghiệm tải cao đạt 1,200 yêu cầu/giây với cơ chế đồng bộ dữ liệu mượt mà trên Zalo Mini App Client."
       }
     },
     endpoints: [
-      { method: "POST", path: "/api/v1/auth/register", description: { en: "Register a new user account", vi: "Đăng ký tài khoản người dùng mới" } },
-      { method: "POST", path: "/api/v1/auth/login", description: { en: "Authenticate user and get access token", vi: "Xác thực người dùng và nhận access token" } },
-      { method: "GET", path: "/api/v1/products", description: { en: "List products with search, pagination, and filter queries", vi: "Lấy danh sách sản phẩm kết hợp tìm kiếm, phân trang và bộ lọc" } },
-      { method: "POST", path: "/api/v1/orders", description: { en: "Create an order and initiate payment session", vi: "Tạo đơn hàng và khởi tạo phiên thanh toán" } },
-      { method: "GET", path: "/api/v1/orders/my-orders", description: { en: "Fetch logged-in user order history", vi: "Lấy lịch sử đơn hàng của người dùng đang đăng nhập" } }
+      { method: "GET", path: "/api/v1/customer/flash-sales/home", description: { en: "Fetch active flash sale campaigns for homepage", vi: "Lấy danh sách chiến dịch Flash Sale trang chủ" } },
+      { method: "POST", path: "/api/v1/customer/affiliate/register", description: { en: "Register new affiliate customer account", vi: "Đăng ký tài khoản đối tác Affiliate mới" } },
+      { method: "GET", path: "/api/v1/store-admin/crm/orders", description: { en: "Admin order management with SLA & status filter", vi: "Quản lý đơn hàng CRM theo SLA và trạng thái" } },
+      { method: "POST", path: "/api/v1/customer/orders/cancel-realtime", description: { en: "Real-time order cancellation with stock roll-back", vi: "Hủy đơn hàng thời gian thực và hoàn kho tự động" } }
     ]
   },
   {
-    id: "blog-platform-api",
+    id: "jobgogo-recruitment",
+    image: jobgogoImg,
     title: {
-      en: "Blog Platform API",
-      vi: "Blog Platform API"
+      en: "JobGogo — Fullstack Recruitment Platform",
+      vi: "JobGogo — Nền Tảng Tuyển Dụng & Việc Làm Fullstack"
     },
     shortDescription: {
-      en: "API for blog platform with comments and auth.",
-      vi: "API cho nền tảng blog với tính năng bình luận phân cấp và xác thực."
+      en: "Cross-platform mobile/web job recruitment application and REST API.",
+      vi: "Ứng dụng tuyển dụng việc làm đa nền tảng Mobile/Web kết hợp REST API."
     },
     description: {
-      en: "A robust backend engine for a blogging community platform. It features structured post creation, nested comment threads, user relationships (followers), and real-time interaction capabilities.",
-      vi: "Hệ thống backend mạnh mẽ cho nền tảng cộng đồng viết blog. Hệ thống hỗ trợ tạo bài viết chuẩn cấu trúc, bình luận lồng nhau đa cấp, mối quan hệ người dùng (theo dõi) và tương tác thời gian thực."
+      en: "A robust recruitment and job application platform. The frontend client is built with Ionic Framework + Angular + TypeScript, delivering native mobile apps (iOS/Android) and responsive web. The backend API is powered by Laravel, handling job posting workflows, recruiter verification, applicant tracking, and automated email notifications.",
+      vi: "Nền tảng tìm kiếm việc làm và tuyển dụng nhân sự toàn diện. Frontend Client phát triển bằng Ionic Framework + Angular + TypeScript mang lại ứng dụng Mobile (iOS/Android) và Web mượt mà. Backend REST API xây dựng bằng Laravel xử lý quy trình đăng tin, duyệt nhà tuyển dụng, theo dõi hồ sơ và tự động gửi thông báo email."
     },
-    techStack: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "Redis", "Swagger", "Socket.io"],
-    githubUrl: "https://github.com/dinhthang-dev/blog-platform-api",
+    techStack: ["Ionic", "Angular", "TypeScript", "Laravel", "MySQL", "Capacitor", "Tailwind CSS"],
+    githubUrl: "https://github.com/dinhthang-dev/jobgogo-recruitment",
     features: {
       en: [
-        "Modular design structure with NestJS modules, controllers, and services",
-        "Full CRUD operations for articles with rich text content support",
-        "Nested tree comments utilizing PostgreSQL CTEs (Common Table Expressions) for unlimited depth",
-        "Follower system where users can follow others and receive a customized feed",
-        "Real-time notifications using WebSockets (Socket.io) when posts receive likes or comments",
-        "Auto-generated interactive API documentation with OpenAPI/Swagger"
+        "Cross-platform Ionic Angular mobile & web client with Capacitor native integration",
+        "Job search engine with dynamic filters by category, salary, location, and experience",
+        "Applicant resume builder & online job application submission",
+        "Employer recruiter portal for managing job posts, applicants, and candidate status",
+        "Email change & verification workflow with secure token hashing",
+        "Role-based access control for Admins, Recruiters, and Job Seekers"
       ],
       vi: [
-        "Cấu trúc thiết kế dạng module với NestJS modules, controllers và services",
-        "Đầy đủ thao tác CRUD cho bài viết hỗ trợ định dạng nội dung rich text",
-        "Bình luận cây lồng nhau sử dụng PostgreSQL CTEs cho độ sâu vô hạn",
-        "Hệ thống theo dõi giúp người dùng theo dõi tác giả khác và nhận trang tin tùy chỉnh",
-        "Thông báo thời gian thực qua WebSockets (Socket.io) khi bài viết nhận lượt thích hoặc bình luận",
-        "Tự động tạo tài liệu API tương tác bằng OpenAPI/Swagger"
+        "Client Mobile & Web đa nền tảng viết bằng Ionic Angular kết hợp Capacitor",
+        "Bộ tìm kiếm việc làm linh hoạt theo ngành nghề, mức lương, địa điểm và kinh nghiệm",
+        "Tạo hồ sơ ứng viên online và ứng tuyển việc làm trực tiếp trên ứng dụng",
+        "Trang nhà tuyển dụng quản lý tin tuyển dụng, danh sách ứng viên và trạng thái duyệt",
+        "Quy trình thay đổi và xác thực Email bảo mật với mã hóa Token",
+        "Phân quyền hệ thống chi tiết cho Quản trị viên, Nhà tuyển dụng và Người tìm việc"
       ]
     },
     architecture: {
-      en: "Domain-Driven Design (DDD) principles implemented inside NestJS framework. Utilizing Guard for JWT authentication, Interceptors for response formatting, and Exception Filters for structured error responses.",
-      vi: "Áp dụng nguyên lý Domain-Driven Design (DDD) trong framework NestJS. Sử dụng Guard cho xác thực JWT, Interceptor để định dạng phản hồi và Exception Filter để xử lý phản hồi lỗi chuẩn hóa."
+      en: "Mobile Hybrid Architecture: Angular Modular Frontend using RxJS services communicating with a Laravel RESTful JSON API backend with JWT token authentication.",
+      vi: "Kiến trúc Mobile Hybrid: Frontend dạng Module Angular sử dụng RxJS Service giao tiếp với Backend RESTful API Laravel qua cơ chế xác thực JWT Token."
     },
     databaseDesign: {
-      en: "Relational database schema with PostgreSQL. Proper relational mappings (One-to-Many, Many-to-Many) for posts, users, tags, and comments. Optimized querying using TypeORM Query Builder and database views for aggregate metrics (like total reads/likes).",
-      vi: "Cơ sở dữ liệu quan hệ với PostgreSQL. Mối quan hệ chuẩn (Một-Nhiều, Nhiều-Nhiều) cho bài viết, người dùng, thẻ tag và bình luận. Tối ưu truy vấn bằng TypeORM Query Builder và Database Views cho các chỉ số tổng hợp (lượt đọc/lượt thích)."
+      en: "Normalized MySQL relational database storing jobs, categories, applications, user profiles, and company profiles with cascading constraints and efficient query indexing.",
+      vi: "Cơ sở dữ liệu quan hệ MySQL lưu trữ công việc, danh mục, ứng tuyển, hồ sơ người dùng và nhà tuyển dụng với khóa ngoại liên hoàn và đánh index tối ưu."
     },
     performance: {
       caching: {
-        en: "Redis utilized to store user activity feed streams. New posts are pushed to follower feeds using a Fan-out write strategy.",
-        vi: "Sử dụng Redis để lưu trữ luồng tin hoạt động của người dùng. Bài viết mới được đẩy đến bảng tin người theo dõi bằng chiến lược ghi Fan-out."
+        en: "Fast category lookup and job feed query caching with Redis, reducing backend database response time to under 25ms.",
+        vi: "Cache danh mục và danh sách việc làm nổi bật với Redis, giảm thời gian phản hồi máy chủ xuống dưới 25ms."
       },
       loadTesting: {
-        en: "Achieved sub-15ms response times for feed lookups from Redis, handling up to 1,200 RPS during read heavy simulations.",
-        vi: "Đạt thời gian phản hồi dưới 15ms cho các truy vấn bảng tin từ Redis, xử lý tới 1,200 RPS trong các thử nghiệm mô phỏng đọc tải cao."
+        en: "Mobile client bundle optimized with Angular lazy loading for instant app startup times.",
+        vi: "Dung lượng Bundle Mobile được tối ưu nhờ kỹ thuật Lazy Loading trong Angular giúp khởi động ứng dụng tức thì."
       }
     },
     endpoints: [
-      { method: "GET", path: "/api/v1/posts", description: { en: "Get global feed or filtered posts list", vi: "Lấy danh sách bài viết toàn cục hoặc theo bộ lọc" } },
-      { method: "POST", path: "/api/v1/posts", description: { en: "Create a new article (requires Creator role)", vi: "Tạo bài viết mới (yêu cầu quyền Creator)" } },
-      { method: "POST", path: "/api/v1/posts/:id/comments", description: { en: "Post a comment or reply to an existing comment", vi: "Bình luận hoặc phản hồi lại bình luận có sẵn" } },
-      { method: "POST", path: "/api/v1/users/:id/follow", description: { en: "Follow or unfollow another author", vi: "Theo dõi hoặc hủy theo dõi một tác giả khác" } },
-      { method: "GET", path: "/api/v1/feed", description: { en: "Get personalized feed of followed authors", vi: "Lấy bảng tin cá nhân hóa từ các tác giả đang theo dõi" } }
+      { method: "GET", path: "/api/v1/jobs", description: { en: "Fetch paginated jobs with search and filter parameters", vi: "Lấy danh sách việc làm có phân trang và bộ lọc" } },
+      { method: "POST", path: "/api/v1/jobs/apply", description: { en: "Submit job application with CV attachment", vi: "Nộp hồ sơ ứng tuyển kèm tệp CV" } },
+      { method: "POST", path: "/api/v1/recruiter/jobs", description: { en: "Post a new job opening (Requires Recruiter role)", vi: "Đăng tin tuyển dụng mới (Yêu cầu quyền Recruiter)" } },
+      { method: "POST", path: "/api/v1/user/change-email", description: { en: "Initiate secure email change verification workflow", vi: "Khởi tạo quy trình xác thực thay đổi Email bảo mật" } }
     ]
   },
   {
-    id: "task-management-api",
+    id: "travel-booking-2025",
+    image: travelImg,
     title: {
-      en: "Task Management API",
-      vi: "Task Management API"
+      en: "Travel Booking 2025 — Tour Management System",
+      vi: "Travel Booking 2025 — Hệ Thống Đặt & Quản Lý Tour Du Lịch"
     },
     shortDescription: {
-      en: "API for task management system with clean structure.",
-      vi: "API cho hệ thống quản lý công việc với cấu trúc sạch và xử lý bất đồng bộ."
+      en: "Fullstack travel booking platform with dynamic navigation engine.",
+      vi: "Hệ thống đặt tour du lịch fullstack tích hợp bộ điều hướng linh hoạt."
     },
     description: {
-      en: "An enterprise-ready task scheduling and project tracking API. Designed to support collaboration, workflow automation, deadline management, and team productivity tracking.",
-      vi: "Hệ thống API theo dõi dự án và lập lịch công việc cấp doanh nghiệp. Được thiết kế để hỗ trợ làm việc nhóm, tự động hóa quy trình, quản lý hạn chót và theo dõi năng suất đội ngũ."
+      en: "A modern travel booking and tour operator management system built with Laravel, PHP, Tailwind CSS, and MySQL. Features dynamic header menu builders, tour package customization, booking schedule calendars, seat allocation, and automated invoice processing.",
+      vi: "Hệ thống đặt tour du lịch và quản lý điều hành tour hiện đại xây dựng trên nền tảng Laravel, PHP, Tailwind CSS và MySQL. Tích hợp bộ tùy chỉnh Menu Header động, tùy biến gói tour, lịch khởi hành, quản lý chỗ ngồi và tự động xuất hóa đơn."
     },
-    techStack: ["Node.js", "Express.js", "MySQL", "Sequelize", "Docker", "Jest", "BullMQ"],
-    githubUrl: "https://github.com/dinhthang-dev/task-management-api",
+    techStack: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "JavaScript", "Blade"],
+    githubUrl: "https://github.com/dinhthang-dev/travel-booking-2025",
     features: {
       en: [
-        "Workspace creation with team membership and user invitation workflows",
-        "Task management with custom statuses (To Do, In Progress, In Review, Done)",
-        "Asynchronous background task scheduling for automatic email alerts on approaching deadlines",
-        "Activity logs tracking who updated what task, and when",
-        "File attachment management linking with cloud storage (mocked/configured for local upload)",
-        "Comprehensive unit and integration test suite writing using Jest"
+        "Dynamic Header Menu Builder with nested multi-level navigation management",
+        "Tour package management with pricing tiers, itineraries, and inclusions",
+        "Online booking calendar with real-time seat availability tracking",
+        "Customer booking CRM panel for tracking payment status and vouchers",
+        "Automated booking confirmation emails and PDF invoice generation",
+        "SEO-optimized landing pages for featured travel destinations"
       ],
       vi: [
-        "Tạo không gian làm việc (Workspace) với quy trình mời thành viên và phân quyền nhóm",
-        "Quản lý công việc với các trạng thái tùy chỉnh (Cần làm, Đang làm, Đang duyệt, Hoàn thành)",
-        "Lập lịch công việc chạy ngầm (Background Task) để tự động gửi email nhắc nhở khi sắp đến hạn",
-        "Nhật ký hoạt động (Activity Log) ghi nhận lịch sử thay đổi công việc chi tiết",
-        "Quản lý tệp đính kèm kết nối lưu trữ đám mây (cấu hình tải lên địa phương)",
-        "Bộ kiểm thử đơn vị (Unit Test) và kiểm thử tích hợp toàn diện viết bằng Jest"
+        "Trình quản trị Menu Header động hỗ trợ điều hướng đa cấp linh hoạt",
+        "Quản lý gói tour với các mức giá, lịch trình chi tiết và dịch vụ đi kèm",
+        "Lịch đặt tour trực tuyến với khả năng theo dõi số chỗ trống theo thời gian thực",
+        "Bảng CRM quản lý đơn đặt tour, trạng thái thanh toán và mã giảm giá",
+        "Tự động gửi email xác nhận đặt tour và xuất hóa đơn PDF",
+        "Tối ưu SEO cho các trang hạ cánh (Landing page) điểm đến du lịch nổi bật"
       ]
     },
     architecture: {
-      en: "Layered MVC Architecture focusing on decoupling data models, business logic (Services), and controllers. BullMQ used with Redis to run heavy worker tasks in the background.",
-      vi: "Kiến trúc Layered MVC tập trung tách biệt giữa Data Model, Business Logic (Services) và Controllers. Sử dụng BullMQ kết hợp Redis để chạy các công việc nặng ở hàng chờ nền."
+      en: "Monolithic Model-View-Controller (MVC) architecture with Laravel Blade templates, Tailwind CSS styling, and custom Service classes for booking business logic.",
+      vi: "Kiến trúc Model-View-Controller (MVC) với Laravel Blade, Tailwind CSS và các Service Class xử lý nghiệp vụ đặt tour chuyên biệt."
     },
     databaseDesign: {
-      en: "MySQL relational database. Set up cascading deletes, foreign keys, and indexes on workspace_id, assignee_id, and due_date. Transactions implemented for operations involving multiple queries (e.g. archiving a workspace and its tasks).",
-      vi: "Cơ sở dữ liệu quan hệ MySQL. Thiết lập xóa liên hoàn (cascading deletes), khóa ngoại và chỉ mục trên workspace_id, assignee_id và due_date. Triển khai Transaction cho các thao tác chứa nhiều truy vấn."
+      en: "Relational MySQL schema structuring tours, schedules, bookings, passengers, payments, and dynamic menu nodes with foreign key constraints.",
+      vi: "Schema MySQL quan hệ lưu trữ thông tin tour, lịch trình, đơn đặt, hành khách, thanh toán và cây menu động với ràng buộc khóa ngoại."
     },
     performance: {
       caching: {
-        en: "Database connection pooling configured for optimal thread reuse. Heavy queries (such as analytics reports) pre-calculated hourly and stored in caching layers.",
-        vi: "Cấu hình Database Connection Pooling để tái sử dụng luồng tối ưu. Các truy vấn nặng (như báo cáo phân tích) được tính toán trước hàng giờ và lưu vào tầng cache."
+        en: "Menu structure and destination guides cached in memory for sub-10ms page renders.",
+        vi: "Cấu trúc Menu và thông tin điểm đến được cache trong bộ nhớ cho tốc độ tải trang dưới 10ms."
       },
       loadTesting: {
-        en: "Dockerized load tests showed consistent throughput with memory leaks prevented via rigorous request cycle garbage collection monitoring.",
-        vi: "Kiểm thử tải trong môi trường Docker cho thấy băng thông nhất quán, ngăn ngừa rò rỉ bộ nhớ nhờ theo dõi vòng đời thu gom rác (garbage collection)."
+        en: "Optimized SQL queries using Eloquent eager loading to prevent N+1 query problems.",
+        vi: "Tối ưu hóa các truy vấn SQL với Eager Loading trong Eloquent ngăn triệt để lỗi N+1 query."
       }
     },
     endpoints: [
-      { method: "POST", path: "/api/v1/workspaces", description: { en: "Create a workspace for team collaboration", vi: "Tạo không gian làm việc cho nhóm" } },
-      { method: "POST", path: "/api/v1/tasks", description: { en: "Create a task and assign to team member", vi: "Tạo công việc và giao cho thành viên" } },
-      { method: "PATCH", path: "/api/v1/tasks/:id/status", description: { en: "Update task status (Triggers background event)", vi: "Cập nhật trạng thái công việc (Kích hoạt sự kiện chạy ngầm)" } },
-      { method: "GET", path: "/api/v1/workspaces/:id/analytics", description: { en: "Generate team task completion reports", vi: "Xuất báo cáo tiến độ hoàn thành công việc của nhóm" } },
-      { method: "POST", path: "/api/v1/workspaces/:id/members", description: { en: "Add a member to workspace with specific role", vi: "Thêm thành viên vào không gian làm việc với vai trò cụ thể" } }
+      { method: "GET", path: "/tours", description: { en: "Display active tour packages with filter options", vi: "Hiển thị danh sách tour du lịch cùng bộ lọc" } },
+      { method: "POST", path: "/booking/checkout", description: { en: "Process tour booking request and payment session", vi: "Xử lý yêu cầu đặt tour và khởi tạo thanh toán" } },
+      { method: "GET", path: "/admin/header-menus", description: { en: "Admin panel for building dynamic navigation menus", vi: "Trang quản trị cấu hình menu điều hướng động" } }
+    ]
+  },
+  {
+    id: "tino-page-cms",
+    image: tinocmsImg,
+    title: {
+      en: "Tino Page — CMS & Landing Page Builder",
+      vi: "Tino Page — Hệ Thống CMS & Tạo Trang Landing Page"
+    },
+    shortDescription: {
+      en: "Modular content management system and landing page generator.",
+      vi: "Hệ thống quản trị nội dung module và tạo trang Landing Page."
+    },
+    description: {
+      en: "A customized CMS and landing page builder framework. Allows administrators to dynamically compose landing pages, manage marketing forms, collect customer leads, configure SMTP email notifications, and optimize page SEO settings.",
+      vi: "Hệ thống quản trị nội dung CMS và xây dựng trang Landing Page tùy biến. Cho phép quản trị viên sắp xếp khối nội dung linh hoạt, quản lý biểu mẫu tiếp thị, thu thập thông tin khách hàng (Leads), cấu hình email SMTP và tối ưu SEO."
+    },
+    techStack: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "JavaScript"],
+    githubUrl: "https://github.com/dinhthang-dev/tino-page-cms",
+    features: {
+      en: [
+        "Modular block-based CMS for assembling custom landing pages",
+        "Form lead capture engine with automated email alert notifications",
+        "Built-in SEO management for meta titles, descriptions, and OpenGraph tags",
+        "Admin user management with granular access control",
+        "Custom media upload manager for images and assets",
+        "SMTP email server configuration & test email suite"
+      ],
+      vi: [
+        "Hệ thống CMS dạng khối (Block-based) ghép trang Landing Page linh hoạt",
+        "Engine thu thập Lead biểu mẫu kèm thông báo Email tự động về quản trị viên",
+        "Tích hợp công cụ quản lý SEO (Meta Title, Description, OpenGraph)",
+        "Quản lý tài khoản Admin và phân quyền người dùng chi tiết",
+        "Quản lý tải lên tệp tin media (hình ảnh, tài liệu) chuyên nghiệp",
+        "Cấu hình máy chủ Email SMTP và công cụ kiểm thử gửi thư"
+      ]
+    },
+    architecture: {
+      en: "Modular Architecture powered by Laravel, using dynamic component rendering and custom Blade directives for block composition.",
+      vi: "Kiến trúc Module hóa phát triển trên nền Laravel, render component động và Blade Directives để thiết kế các khối trang."
+    },
+    databaseDesign: {
+      en: "Flexible MySQL database storing page blocks, layout templates, lead submissions, and system options.",
+      vi: "Cơ sở dữ liệu MySQL lưu trữ các khối trang, mẫu giao diện, thông tin Lead đăng ký và cấu hình hệ thống."
+    },
+    performance: {
+      caching: {
+        en: "Generated landing page HTML blocks pre-rendered and cached for lightning-fast page loading.",
+        vi: "Các khối HTML Landing Page được render sẵn và cache giúp tốc độ tải trang cực nhanh."
+      },
+      loadTesting: {
+        en: "Zero database overhead for static cached landing page views under high campaign traffic.",
+        vi: "Tải trang Landing Page gần như không tốn tài nguyên cơ sở dữ liệu khi chạy chiến dịch marketing."
+      }
+    },
+    endpoints: [
+      { method: "GET", path: "/p/:slug", description: { en: "Render public dynamic landing page", vi: "Hiển thị trang Landing Page công khai theo slug" } },
+      { method: "POST", path: "/leads/submit", description: { en: "Capture customer lead form submission", vi: "Ghi nhận thông tin biểu mẫu tư vấn từ khách hàng" } },
+      { method: "GET", path: "/admin/pages", description: { en: "Admin dashboard to manage pages and layouts", vi: "Trang quản trị danh sách trang và bố cục" } }
+    ]
+  },
+  {
+    id: "biolink-app",
+    image: biolinkImg,
+    title: {
+      en: "BioLink — Personal Profile & Link Builder",
+      vi: "BioLink — Ứng Dụng Tạo Trang Link Cá Nhân & Profile"
+    },
+    shortDescription: {
+      en: "Cross-platform mobile & web bio link generator app.",
+      vi: "Ứng dụng tạo trang liên kết cá nhân và Bio Link đa nền tảng."
+    },
+    description: {
+      en: "A modern cross-platform application for creating personalized bio link landing pages. Built with Ionic Framework, Angular, TypeScript, Tailwind CSS, and Transloco for multi-language support (i18n). Features custom link buttons, QR code generator, dynamic theme styling, and social media integration.",
+      vi: "Ứng dụng đa nền tảng hiện đại giúp tạo trang danh thiếp điện tử và Bio Link cá nhân. Phát triển với Ionic Framework, Angular, TypeScript, Tailwind CSS và Transloco hỗ trợ đa ngôn ngữ (i18n). Tích hợp tùy chỉnh nút liên kết, tạo mã QR Code, đổi giao diện (theme) và liên kết mạng xã hội."
+    },
+    techStack: ["Ionic", "Angular", "TypeScript", "Tailwind CSS", "Transloco (i18n)", "Capacitor"],
+    githubUrl: "https://github.com/dinhthang-dev/biolink-profile-app",
+    features: {
+      en: [
+        "Interactive bio link builder with customizable link buttons & social icons",
+        "Dynamic theme switching (Dark mode, Gradient themes, Minimalist cards)",
+        "Instant custom QR Code generator for quick profile sharing",
+        "Multi-language localization using Transloco (English & Vietnamese)",
+        "Cross-platform responsive design for Mobile, Tablet, and Desktop views",
+        "Fast local asset building with Tailwind CSS optimization"
+      ],
+      vi: [
+        "Trình tạo trang Bio Link tương tác tùy chỉnh các nút liên kết và icon mạng xã hội",
+        "Chuyển đổi giao diện linh hoạt (Dark mode, Gradient, Phong cách tối giản)",
+        "Tự động tạo mã QR Code tức thì hỗ trợ chia sẻ trang cá nhân",
+        "Hỗ trợ đa ngôn ngữ với Transloco (Tiếng Việt & Tiếng Anh)",
+        "Thiết kế Responsive tương thích mượt mà trên Mobile, Tablet và Desktop",
+        "Tối ưu dung lượng Build sản phẩm nhờ Tailwind CSS"
+      ]
+    },
+    architecture: {
+      en: "Single Page Application (SPA) architecture built with Angular standalone components, RxJS state management, and Transloco i18n module.",
+      vi: "Kiến trúc Ứng dụng đơn trang (SPA) phát triển bằng Angular Standalone Components, quản lý luồng dữ liệu RxJS và bộ đa ngôn ngữ Transloco."
+    },
+    databaseDesign: {
+      en: "Client-side JSON schema model with LocalStorage persistence and RESTful sync capabilities.",
+      vi: "Mô hình dữ liệu JSON phía Client với cơ chế lưu trữ LocalStorage và đồng bộ RESTful API."
+    },
+    performance: {
+      caching: {
+        en: "Instant page rendering with zero server latency using Angular client routing.",
+        vi: "Tốc độ tải trang tức thì không có độ trễ máy chủ nhờ Angular Client Routing."
+      },
+      loadTesting: {
+        en: "Lighthouse Performance score of 98/100 on mobile devices.",
+        vi: "Điểm số hiệu năng Lighthouse đạt 98/100 trên thiết bị di động."
+      }
+    },
+    endpoints: [
+      { method: "GET", path: "/bio/:username", description: { en: "Render public bio profile page", vi: "Hiển thị trang Bio cá nhân công khai" } },
+      { method: "POST", path: "/api/bio/update", description: { en: "Save bio profile settings and links", vi: "Lưu cấu hình trang Bio và danh sách liên kết" } }
     ]
   }
 ];
@@ -185,6 +307,7 @@ export const getLocalizedProjects = (lang = 'en') => {
   const currentLang = lang.startsWith('vi') ? 'vi' : 'en';
   return projectsData.map(project => ({
     id: project.id,
+    image: project.image,
     title: project.title[currentLang] || project.title.en,
     shortDescription: project.shortDescription[currentLang] || project.shortDescription.en,
     description: project.description[currentLang] || project.description.en,

@@ -100,7 +100,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-transparent">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header Title Grid */}
@@ -135,19 +135,24 @@ export default function Projects() {
               key={project.id}
               className="group flex flex-col bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              {/* Technical Code Console Mockup Header */}
-              <div className="h-44 bg-slate-950 border-b border-slate-800 relative overflow-hidden">
-                {/* Console header bar */}
-                <div className="flex items-center justify-between px-4 py-2 bg-slate-900/60 border-b border-slate-800/80">
-                  <div className="flex space-x-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+              {/* Project Image Banner Header */}
+              <div className="h-48 w-full overflow-hidden bg-slate-900 relative">
+                {project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out" 
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-white text-xs font-semibold">
+                    {project.title}
                   </div>
-                  <span className="text-[9px] font-mono text-slate-500">server_api.log</span>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span className="text-white text-[10px] font-bold tracking-wider uppercase bg-blue-600/90 backdrop-blur px-3 py-1.5 rounded-lg shadow-sm">
+                    {t('projects.viewProject')} &rarr;
+                  </span>
                 </div>
-                {/* Render the specific code simulation inside */}
-                {renderTechMockup(project.id)}
               </div>
 
               {/* Card Body */}
