@@ -41,8 +41,8 @@ export default function ContactPage() {
     {
       icon: <Mail className="text-blue-600" size={18} />,
       label: t('contactPage.labels.email'),
-      value: "dinhthang.dev@gmail.com",
-      href: "mailto:dinhthang.dev@gmail.com"
+      value: "ledinhthang13082005@gmail.com",
+      href: "mailto:ledinhthang13082005@gmail.com"
     },
     {
       icon: <MapPin className="text-blue-600" size={18} />,
@@ -52,8 +52,8 @@ export default function ContactPage() {
     {
       icon: <Phone className="text-blue-600" size={18} />,
       label: t('contactPage.labels.phone'),
-      value: "+84 123 456 789",
-      href: "tel:+84123456789"
+      value: "+84 971 550 895",
+      href: "tel:+84971550895"
     },
     {
       icon: <Calendar className="text-blue-600" size={18} />,
@@ -65,8 +65,8 @@ export default function ContactPage() {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com/dinhthang-dev",
-      display: "github.com/dinhthang-dev",
+      url: "https://github.com/lethang1308",
+      display: "github.com/lethang1308",
       color: "hover:border-slate-800 hover:text-slate-800",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 text-slate-800" fill="currentColor">
@@ -120,8 +120,8 @@ export default function ContactPage() {
     },
     {
       name: "Email",
-      url: "mailto:dinhthang.dev@gmail.com",
-      display: "dinhthang.dev@gmail.com",
+      url: "mailto:ledinhthang13082005@gmail.com",
+      display: "ledinhthang13082005@gmail.com",
       color: "hover:border-red-500 hover:text-red-500",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" strokeWidth="2">

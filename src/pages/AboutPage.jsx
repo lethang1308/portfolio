@@ -8,6 +8,8 @@ import Footer from '../components/Footer';
 import ScrollReveal from '../components/animations/ScrollReveal';
 import StaggerContainer from '../components/animations/StaggerContainer';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import SkillIcon from '../components/SkillIcon';
+import { homeSkills } from '../data/skills';
 
 /**
  * Custom Counter Component for Statistics
@@ -96,19 +98,6 @@ export default function AboutPage() {
     )
   ];
 
-  const technologies = [
-    { name: "Go", color: "#00ADD8", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.09 13.92H8.48v-2.28h4.63v2.28zm2.2-3.8H8.48V9.84h6.81v2.28z"/></svg> },
-    { name: "Python", color: "#3776AB", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 2C7.58 4 4 7.58 4 12s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1.06 6.53v1.07h-2.12v-1.07h2.12z"/></svg> },
-    { name: "PostgreSQL", color: "#336791", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.5h-2v-2h2v2zm0-4h-2v-5h2v5z"/></svg> },
-    { name: "Redis", color: "#D82C20", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2L2 7l10 5 10-5-10-5zm0 10L2 17l10 5 10-5-10-5zm-8-3v4l8 4 8-4V9l-8 4-8-4z"/></svg> },
-    { name: "Kafka", color: "#000000", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.5h-2v-2h2v2zm0-4h-2v-5h2v5z"/></svg> },
-    { name: "Docker", color: "#2496ED", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v7.029C18.31 21.164 22 17.013 22 12c0-5.523-4.477-10-10-10z"/></svg> },
-    { name: "Kubernetes", color: "#326CE5", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2L2 7.5v9L12 22l10-5.5v-9L12 2zm8.5 5.9L12.5 12V4.4l8 3.5zm-9 0L3.5 12V4.4l8 3.5zm-8 6l8 4.5v-7.6l-8-3.5v6.6zm9 4.5l8-4.5v-6.6l-8 3.5v7.6z"/></svg> },
-    { name: "AWS", color: "#FF9900", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.8 14.3c-.6 0-1-.4-1-.9s.4-.9 1-.9 1 .4 1 .9-.4.9-1 .9zm3.8-3.4c-.6 0-1-.4-1-.9s.4-.9 1-.9 1 .4 1 .9-.4.9-1 .9zm-1.9-2.7c-.6 0-1-.4-1-.9s.4-.9 1-.9 1 .4 1 .9-.4.9-1 .9z"/></svg> },
-    { name: "Nginx", color: "#009639", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2.4 8.7c-.1-.7-.1-1.5 0-2.2-.4.6-.7 1.3-.9 2 .2.1.6.2.9.2zm4.8 0c.3 0 .7-.1.9-.2-.2-.7-.5-1.4-.9-2 .1.7.1 1.5 0 2.2zM12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/></svg> },
-    { name: "Terraform", color: "#7B42BC", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M23.2 11.5L12.5.8a1.7 1.7 0 0 0-2.4 0L8.7 2.2l3 3a1.7 1.7 0 0 1 .4 1.7L10.3 8.7a1.7 1.7 0 0 1-1.7-.4L6.9 6.6a1.7 1.7 0 0 1-.3-1.8L9 .8a1.7 1.7 0 0 0-2.4 0L.8 6.6a1.7 1.7 0 0 0 0 2.4l10.7 10.7a1.7 1.7 0 0 0 2.4 0l9.3-9.3a1.7 1.7 0 0 0 0-2.4z"/></svg> }
-  ];
-
   return (
     <div className="min-h-screen bg-transparent flex flex-col justify-between font-sans pt-28 md:pt-36">
       
@@ -170,7 +159,7 @@ export default function AboutPage() {
 
               {/* Social Icons inside Profile Card */}
               <div className="flex items-center space-x-3 pt-2">
-                <a href="https://github.com" target="_blank" rel="noreferrer" className="p-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-500 hover:text-slate-950 transition-colors">
+                <a href="https://github.com/lethang1308" target="_blank" rel="noreferrer" className="p-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-500 hover:text-slate-950 transition-colors">
                   <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
                     <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
                   </svg>
@@ -180,7 +169,7 @@ export default function AboutPage() {
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
                 </a>
-                <a href="mailto:dinhthang.dev@gmail.com" className="p-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-500 hover:text-slate-950 transition-colors">
+                <a href="mailto:ledinhthang13082003@gmail.com" className="p-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-500 hover:text-slate-950 transition-colors">
                   <Mail size={16} />
                 </a>
               </div>
@@ -317,13 +306,13 @@ export default function AboutPage() {
                 <h2 className="font-display font-extrabold text-lg">{t('aboutPage.favoriteTechTitle')}</h2>
               </div>
 
-              <div className="grid grid-cols-5 gap-4">
-                {technologies.map((tech, idx) => (
-                  <div key={idx} className="flex flex-col items-center p-3 rounded-2xl bg-slate-50/50 border border-slate-100 hover:scale-105 hover:bg-slate-50 hover:shadow-sm transition-all duration-300">
-                    <div style={{ color: tech.color }} className="w-10 h-10 flex items-center justify-center shrink-0">
-                      {tech.icon}
+              <div className="grid grid-cols-3 sm:grid-cols-5 gap-4">
+                {homeSkills.map((name) => (
+                  <div key={name} className="flex flex-col items-center p-3 rounded-2xl bg-slate-50/50 border border-slate-100 hover:scale-105 hover:bg-white hover:shadow-md transition-all duration-300 cursor-pointer group">
+                    <div className="w-10 h-10 flex items-center justify-center shrink-0">
+                      <SkillIcon name={name} className="w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
                     </div>
-                    <span className="text-[10px] font-bold text-slate-500 mt-2">{tech.name}</span>
+                    <span className="text-[10px] font-bold text-slate-600 mt-2 text-center uppercase tracking-wider group-hover:text-blue-600 transition-colors">{name}</span>
                   </div>
                 ))}
               </div>

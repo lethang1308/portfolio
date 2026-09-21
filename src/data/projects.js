@@ -1,8 +1,8 @@
-import ecoluckImg from '../assets/ecoluck.jpg';
-import jobgogoImg from '../assets/jobgogo.jpg';
-import travelImg from '../assets/travel.jpg';
-import tinocmsImg from '../assets/tinocms.jpg';
-import biolinkImg from '../assets/biolink.jpg';
+import ecoluckImg from '../assets/ecoluck.png';
+import jobgogoImg from '../assets/jobgogo.png';
+import asiaTravelImg from '../assets/asia-travel.png';
+import tinoPageImg from '../assets/tinopage.png';
+import goplusAiImg from '../assets/goplusai.png';
 
 export const projectsData = [
   {
@@ -127,14 +127,14 @@ export const projectsData = [
   },
   {
     id: "travel-booking-2025",
-    image: travelImg,
+    image: asiaTravelImg,
     title: {
-      en: "Travel Booking 2025 — Tour Management System",
-      vi: "Travel Booking 2025 — Hệ Thống Đặt & Quản Lý Tour Du Lịch"
+      en: "Asia Travel — Tour Booking & Management Platform",
+      vi: "Asia Travel — Nền Tảng Đặt & Quản Lý Tour Du Lịch"
     },
     shortDescription: {
-      en: "Fullstack travel booking platform with dynamic navigation engine.",
-      vi: "Hệ thống đặt tour du lịch fullstack tích hợp bộ điều hướng linh hoạt."
+      en: "Fullstack travel booking platform with tours, visas, and operations management.",
+      vi: "Nền tảng đặt tour fullstack với quản lý tour, visa và vận hành."
     },
     description: {
       en: "A modern travel booking and tour operator management system built with Laravel, PHP, Tailwind CSS, and MySQL. Features dynamic header menu builders, tour package customization, booking schedule calendars, seat allocation, and automated invoice processing.",
@@ -185,67 +185,128 @@ export const projectsData = [
     ]
   },
   {
-    id: "tino-page-cms",
-    image: tinocmsImg,
+    id: "tino-page-platform",
+    image: tinoPageImg,
     title: {
-      en: "Tino Page — CMS & Landing Page Builder",
-      vi: "Tino Page — Hệ Thống CMS & Tạo Trang Landing Page"
+      en: "Tino Page — Bio Page, CMS & Landing Page Platform",
+      vi: "Tino Page — Nền Tảng Bio Page, CMS & Landing Page"
     },
     shortDescription: {
-      en: "Modular content management system and landing page generator.",
-      vi: "Hệ thống quản trị nội dung module và tạo trang Landing Page."
+      en: "One platform connecting a public bio-page experience with a full CMS administration portal.",
+      vi: "Một nền tảng kết nối trải nghiệm Bio Page cho người dùng với cổng CMS quản trị đầy đủ."
     },
     description: {
-      en: "A customized CMS and landing page builder framework. Allows administrators to dynamically compose landing pages, manage marketing forms, collect customer leads, configure SMTP email notifications, and optimize page SEO settings.",
-      vi: "Hệ thống quản trị nội dung CMS và xây dựng trang Landing Page tùy biến. Cho phép quản trị viên sắp xếp khối nội dung linh hoạt, quản lý biểu mẫu tiếp thị, thu thập thông tin khách hàng (Leads), cấu hình email SMTP và tối ưu SEO."
+      en: "A unified platform where the administrator manages page content, templates, leads, SEO, and media while users create a personal bio page with links, themes, social profiles, and QR sharing.",
+      vi: "Nền tảng hợp nhất: quản trị viên quản lý nội dung, mẫu trang, lead, SEO và media; người dùng tạo Bio Page cá nhân với liên kết, giao diện, mạng xã hội và mã QR để chia sẻ."
     },
-    techStack: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "JavaScript"],
+    techStack: ["Laravel", "PHP", "MySQL", "Angular", "Ionic", "TypeScript"],
     githubUrl: "https://github.com/dinhthang-dev/tino-page-cms",
     features: {
       en: [
-        "Modular block-based CMS for assembling custom landing pages",
-        "Form lead capture engine with automated email alert notifications",
-        "Built-in SEO management for meta titles, descriptions, and OpenGraph tags",
-        "Admin user management with granular access control",
-        "Custom media upload manager for images and assets",
-        "SMTP email server configuration & test email suite"
+        "Modular CMS for administrators to compose landing pages and manage templates",
+        "Public bio pages with customizable links, social profiles, themes, and QR sharing",
+        "Lead capture forms with email notifications and campaign-ready landing pages",
+        "SEO management for meta titles, descriptions, and OpenGraph tags",
+        "Media management, access control, and user-facing localization support",
+        "Responsive experience across mobile, tablet, and desktop"
       ],
       vi: [
-        "Hệ thống CMS dạng khối (Block-based) ghép trang Landing Page linh hoạt",
-        "Engine thu thập Lead biểu mẫu kèm thông báo Email tự động về quản trị viên",
-        "Tích hợp công cụ quản lý SEO (Meta Title, Description, OpenGraph)",
-        "Quản lý tài khoản Admin và phân quyền người dùng chi tiết",
-        "Quản lý tải lên tệp tin media (hình ảnh, tài liệu) chuyên nghiệp",
-        "Cấu hình máy chủ Email SMTP và công cụ kiểm thử gửi thư"
+        "CMS dạng khối cho quản trị viên ghép Landing Page và quản lý template",
+        "Bio Page công khai với liên kết, hồ sơ mạng xã hội, giao diện và QR chia sẻ",
+        "Form thu thập Lead kèm thông báo email và Landing Page cho chiến dịch",
+        "Quản lý SEO với Meta Title, Description và OpenGraph",
+        "Quản lý media, phân quyền quản trị và hỗ trợ đa ngôn ngữ cho người dùng",
+        "Trải nghiệm responsive trên Mobile, Tablet và Desktop"
       ]
     },
     architecture: {
-      en: "Modular Architecture powered by Laravel, using dynamic component rendering and custom Blade directives for block composition.",
-      vi: "Kiến trúc Module hóa phát triển trên nền Laravel, render component động và Blade Directives để thiết kế các khối trang."
+      en: "A Laravel CMS administration layer manages content and page data, paired with an Angular/Ionic client for the public bio-page experience.",
+      vi: "Tầng quản trị CMS Laravel quản lý nội dung và dữ liệu trang, kết hợp client Angular/Ionic cho trải nghiệm Bio Page công khai."
     },
     databaseDesign: {
-      en: "Flexible MySQL database storing page blocks, layout templates, lead submissions, and system options.",
-      vi: "Cơ sở dữ liệu MySQL lưu trữ các khối trang, mẫu giao diện, thông tin Lead đăng ký và cấu hình hệ thống."
+      en: "MySQL stores page blocks, templates, profiles, links, lead submissions, media references, and platform settings.",
+      vi: "MySQL lưu khối nội dung, template, hồ sơ, liên kết, lead, tham chiếu media và cấu hình nền tảng."
     },
     performance: {
       caching: {
-        en: "Generated landing page HTML blocks pre-rendered and cached for lightning-fast page loading.",
-        vi: "Các khối HTML Landing Page được render sẵn và cache giúp tốc độ tải trang cực nhanh."
+      en: "Public pages are structured for fast rendering while the CMS keeps editorial workflows separate from visitor traffic.",
+      vi: "Trang công khai được tối ưu cho việc hiển thị nhanh, tách biệt quy trình biên tập CMS khỏi lưu lượng người truy cập."
       },
       loadTesting: {
-        en: "Zero database overhead for static cached landing page views under high campaign traffic.",
-        vi: "Tải trang Landing Page gần như không tốn tài nguyên cơ sở dữ liệu khi chạy chiến dịch marketing."
+      en: "Responsive layouts keep the public profile and landing-page experience usable across device sizes.",
+      vi: "Bố cục responsive đảm bảo trải nghiệm Bio Page và Landing Page tốt trên nhiều kích thước thiết bị."
       }
     },
     endpoints: [
-      { method: "GET", path: "/p/:slug", description: { en: "Render public dynamic landing page", vi: "Hiển thị trang Landing Page công khai theo slug" } },
-      { method: "POST", path: "/leads/submit", description: { en: "Capture customer lead form submission", vi: "Ghi nhận thông tin biểu mẫu tư vấn từ khách hàng" } },
-      { method: "GET", path: "/admin/pages", description: { en: "Admin dashboard to manage pages and layouts", vi: "Trang quản trị danh sách trang và bố cục" } }
+      { method: "GET", path: "/p/:slug", description: { en: "Render a public landing page", vi: "Hiển thị Landing Page công khai" } },
+      { method: "GET", path: "/bio/:username", description: { en: "Render a public bio profile", vi: "Hiển thị Bio Page công khai" } },
+      { method: "POST", path: "/leads/submit", description: { en: "Capture a lead form submission", vi: "Ghi nhận dữ liệu biểu mẫu lead" } },
+      { method: "GET", path: "/admin/pages", description: { en: "Manage pages, content, and layouts", vi: "Quản lý trang, nội dung và bố cục" } }
+    ]
+  },
+  {
+    id: "goplus-ai-platform",
+    image: goplusAiImg,
+    title: {
+      en: "GoPlusAI — Multi-tool Generative AI Platform",
+      vi: "GoPlusAI — Nền Tảng AI Tạo Sinh Đa Công Cụ"
+    },
+    shortDescription: {
+      en: "AI workspace for chat, agents, image and video generation, workflows, and smart learning.",
+      vi: "Không gian làm việc AI cho chat, agent, tạo ảnh/video, workflow và học tập thông minh."
+    },
+    description: {
+      en: "A multi-tool AI workspace built with Ionic and Angular. It brings together AI chat, custom assistants, media generation, AI workflows, study tools, and account features in a responsive web and mobile-ready client.",
+      vi: "Không gian làm việc AI đa công cụ xây dựng bằng Ionic và Angular. Dự án kết hợp AI chat, trợ lý tùy chỉnh, tạo media, AI workflow, công cụ học tập và tính năng tài khoản trong client responsive, sẵn sàng cho mobile."
+    },
+    techStack: ["Ionic", "Angular", "TypeScript", "Capacitor", "RxJS", "Pusher", "Tailwind CSS"],
+    githubUrl: null,
+    features: {
+      en: [
+        "AI chat with conversations, message versions, pinned history, and file attachments",
+        "Custom AI assistant and agent experiences",
+        "Image generation, image editing tools, and a media library",
+        "Video creation workflows across multiple AI video models",
+        "AI workflows, presentation generation, smart study, quizzes, and flashcards",
+        "Vietnamese-first localization, authentication, payments, and affiliate dashboard"
+      ],
+      vi: [
+        "AI chat với hội thoại, phiên bản tin nhắn, lịch sử ghim và tệp đính kèm",
+        "Trải nghiệm trợ lý AI và agent tùy chỉnh",
+        "Tạo ảnh, công cụ chỉnh sửa ảnh và thư viện media",
+        "Workflow tạo video trên nhiều mô hình AI video",
+        "AI workflow, tạo slide, học tập thông minh, quiz và flashcard",
+        "Ưu tiên tiếng Việt, tích hợp xác thực, thanh toán và dashboard affiliate"
+      ]
+    },
+    architecture: {
+      en: "An Ionic/Angular client organized as lazy-loaded feature routes with authentication guards. It communicates with the API layer for accounts, conversations, media, workflows, and affiliate data, with Pusher configured for real-time events.",
+      vi: "Client Ionic/Angular được tổ chức theo các route tính năng lazy-load và auth guard. Ứng dụng giao tiếp với lớp API cho tài khoản, hội thoại, media, workflow và affiliate; Pusher được cấu hình cho sự kiện thời gian thực."
+    },
+    databaseDesign: {
+      en: "The client models conversations, message versions, media jobs, workflow definitions, user profiles, affiliate information, and payment-related views through the API layer.",
+      vi: "Client mô hình hóa hội thoại, phiên bản tin nhắn, tác vụ media, workflow, hồ sơ người dùng, thông tin affiliate và các màn hình liên quan thanh toán thông qua lớp API."
+    },
+    performance: {
+      caching: {
+        en: "Lazy-loaded feature routes keep the initial client focused while media and AI tools load only when needed.",
+        vi: "Các route tính năng lazy-load giúp client ban đầu gọn nhẹ; công cụ media và AI chỉ tải khi cần."
+      },
+      loadTesting: {
+        en: "Capacitor integrations make the same client ready for mobile capabilities such as camera, files, speech, sharing, and push notifications.",
+        vi: "Tích hợp Capacitor giúp cùng một client sẵn sàng cho các khả năng mobile như camera, tệp, giọng nói, chia sẻ và push notification."
+      }
+    },
+    endpoints: [
+      { method: "GET", path: "/api/conversations", description: { en: "Load a user's conversation history", vi: "Tải lịch sử hội thoại của người dùng" } },
+      { method: "GET", path: "/api/affiliate/dashboard", description: { en: "Load affiliate dashboard data", vi: "Tải dữ liệu dashboard affiliate" } },
+      { method: "POST", path: "/api/broadcasting/auth", description: { en: "Authorize real-time channel access", vi: "Xác thực quyền truy cập kênh thời gian thực" } }
     ]
   },
   {
     id: "biolink-app",
-    image: biolinkImg,
+    isMergedInto: "tino-page-platform",
+    image: tinoPageImg,
     title: {
       en: "BioLink — Personal Profile & Link Builder",
       vi: "BioLink — Ứng Dụng Tạo Trang Link Cá Nhân & Profile"
@@ -305,7 +366,9 @@ export const projectsData = [
 
 export const getLocalizedProjects = (lang = 'en') => {
   const currentLang = lang.startsWith('vi') ? 'vi' : 'en';
-  return projectsData.map(project => ({
+  return projectsData
+    .filter(project => !project.isMergedInto)
+    .map(project => ({
     id: project.id,
     image: project.image,
     title: project.title[currentLang] || project.title.en,
@@ -325,7 +388,7 @@ export const getLocalizedProjects = (lang = 'en') => {
       path: ep.path,
       description: ep.description[currentLang] || ep.description.en
     }))
-  }));
+    }));
 };
 
 export const projects = getLocalizedProjects('en');

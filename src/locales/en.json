@@ -20,13 +20,13 @@
     "p2": "My expertise spans across designing intuitive client experiences, architecting RESTful services, database optimization, multi-store systems, and automated deployments.",
     "exp": "3+ Years Experience",
     "available": "Available for new opportunities",
-    "location": "Ho Chi Minh City, Vietnam"
+    "location": "Ha Noi City, Vietnam"
   },
   "aboutPage": {
     "title": "About Me",
     "subtitle": "Full Stack developer building seamless frontend experiences and robust backend architectures.",
     "role": "Full Stack Developer",
-    "location": "Ho Chi Minh City, Vietnam",
+    "location": "Ha Noi City, Vietnam",
     "status": "Available for opportunities",
     "storyTitle": "My Story",
     "storyP1": "I'm a full stack developer who enjoys building complete digital solutions. My journey spans constructing rich client-side applications as well as designing scalable backend infrastructures, databases, and background services.",
@@ -171,7 +171,7 @@
       "message": "Write your message here..."
     },
     "values": {
-      "location": "Ho Chi Minh City, Vietnam",
+      "location": "Ha Noi City, Vietnam",
       "availability": "Available for full-time & freelance projects"
     },
     "form": {

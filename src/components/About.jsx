@@ -21,8 +21,8 @@ export default function About() {
     },
     {
       icon: <Mail className="text-blue-600" size={20} />,
-      text: "dinhthang.dev@gmail.com",
-      href: "mailto:dinhthang.dev@gmail.com",
+      text: "ledinhthang13082005@gmail.com",
+      href: "mailto:ledinhthang13082005@gmail.com",
     },
   ];
 

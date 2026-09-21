@@ -20,13 +20,13 @@
     "p2": "Chuyên môn của tôi bao gồm thiết kế trải nghiệm người dùng trực quan, kiến trúc dịch vụ RESTful, tối ưu hoá truy vấn cơ sở dữ liệu, phát triển các hệ thống đa cửa hàng (Multi-store) và tự động hoá triển khai.",
     "exp": "3+ Năm Kinh Nghiệm",
     "available": "Sẵn sàng cho cơ hội mới",
-    "location": "Thành phố Hồ Chí Minh, Việt Nam"
+    "location": "Hà Nội, Việt Nam"
   },
   "aboutPage": {
     "title": "Về Tôi",
     "subtitle": "Lập trình viên Full Stack đam mê xây dựng các giao diện người dùng mượt mà và kiến trúc Backend tin cậy.",
     "role": "Lập trình viên Full Stack",
-    "location": "Thành phố Hồ Chí Minh, Việt Nam",
+    "location": "Hà Nội, Việt Nam",
     "status": "Sẵn sàng nhận cơ hội mới",
     "storyTitle": "Câu Chuyện Của Tôi",
     "storyP1": "Tôi là một lập trình viên Full Stack yêu thích việc hiện thực hoá các giải pháp công nghệ toàn diện. Hành trình của tôi trải dài từ việc xây dựng các ứng dụng Client tương tác cao đến thiết kế hạ tầng Backend, cơ sở dữ liệu và các dịch vụ chạy ngầm.",
@@ -171,7 +171,7 @@
       "message": "Nhập nội dung bạn muốn trao đổi..."
     },
     "values": {
-      "location": "Thành phố Hồ Chí Minh, Việt Nam",
+      "location": "Hà Nội, Việt Nam",
       "availability": "Sẵn sàng nhận dự án Full-time & Freelance"
     },
     "form": {

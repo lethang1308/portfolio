@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Database, Cloud, Cpu, Server, LayoutGrid, ChevronRight, ArrowUp } from 'lucide-react';
+import { Database, Cloud, Cpu, Server, LayoutGrid, ArrowUp } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import ScrollReveal from '../components/animations/ScrollReveal';
 import StaggerContainer from '../components/animations/StaggerContainer';
 import AnimatedProgressBar from '../components/animations/AnimatedProgressBar';
+import SkillIcon from '../components/SkillIcon';
+import { coreSkills as verifiedCoreSkills, learningSkills as verifiedLearningSkills } from '../data/skills';
 
 export default function SkillsPage() {
   const { t } = useTranslation();
@@ -172,19 +174,26 @@ export default function SkillsPage() {
     }
   ];
 
-  const filteredSkills = activeCategory === 'All' 
-    ? coreSkills 
-    : coreSkills.filter(skill => skill.category === activeCategory);
+  const displayedCoreSkills = verifiedCoreSkills.map((skill) => ({
+    ...skill,
+    description: t(`skillsPage.skillDescriptions.${skill.name}`),
+  }));
+
+  void coreSkills;
+
+  const filteredSkills = activeCategory === 'All'
+    ? displayedCoreSkills
+    : displayedCoreSkills.filter((skill) => skill.category === activeCategory);
 
   const currentlyUsing = [
-    { name: "React", icon: coreSkills[0].icon },
-    { name: "Laravel", icon: coreSkills[4].icon },
-    { name: "MySQL", icon: coreSkills[7].icon },
-    { name: "Tailwind CSS", icon: coreSkills[3].icon },
-    { name: "TypeScript", icon: coreSkills[2].icon }
+    { name: "React" },
+    { name: "Laravel" },
+    { name: "MySQL" },
+    { name: "Tailwind CSS" },
+    { name: "TypeScript" }
   ];
 
-  const learningExploring = [
+  const legacyLearningExploring = [
     {
       name: "Kafka",
       description: t('skillsPage.learningSkills.Kafka'),
@@ -216,6 +225,13 @@ export default function SkillsPage() {
       )
     }
   ];
+
+  const learningExploring = verifiedLearningSkills.map((skill) => ({
+    ...skill,
+    description: t(`skillsPage.learningSkills.${skill.name}`),
+  }));
+
+  void legacyLearningExploring;
 
   return (
     <div className="min-h-screen bg-transparent flex flex-col justify-between font-sans pt-28 md:pt-36">
@@ -273,7 +289,7 @@ export default function SkillsPage() {
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0">
-                    {skill.icon}
+                    <SkillIcon name={skill.name} />
                   </div>
                   <div className="space-y-1">
                     <h3 className="font-display font-extrabold text-sm text-slate-900 leading-none">
@@ -328,7 +344,7 @@ export default function SkillsPage() {
                 className="flex items-center space-x-2 bg-slate-50 border border-slate-100/50 py-2 px-4 rounded-2xl hover:scale-[1.02] transition-transform duration-200"
               >
                 <div className="w-6 h-6 flex items-center justify-center shrink-0">
-                  {tech.icon}
+                  <SkillIcon name={tech.name} className="w-6 h-6" />
                 </div>
                 <span className="text-xs font-bold text-slate-700">{tech.name}</span>
               </div>
@@ -363,7 +379,7 @@ export default function SkillsPage() {
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0">
-                    {tech.icon}
+                    <SkillIcon name={tech.name} />
                   </div>
                   <div className="space-y-1">
                     <h3 className="font-display font-extrabold text-sm text-slate-900 leading-none">
