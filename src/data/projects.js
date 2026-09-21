@@ -8,6 +8,7 @@ export const projectsData = [
   {
     id: "ecoluck-platform",
     image: ecoluckImg,
+    liveUrl: "https://app.ecoluck.vn/",
     title: {
       en: "EcoLuck — Fullstack E-Commerce & Rewards Platform",
       vi: "EcoLuck — Nền Tảng Mua Sắm & Nhận Thưởng Fullstack"
@@ -68,6 +69,7 @@ export const projectsData = [
   {
     id: "jobgogo-recruitment",
     image: jobgogoImg,
+    liveUrl: "https://jobgogo.vn/",
     title: {
       en: "JobGogo — Fullstack Recruitment Platform",
       vi: "JobGogo — Nền Tảng Tuyển Dụng & Việc Làm Fullstack"
@@ -128,6 +130,7 @@ export const projectsData = [
   {
     id: "travel-booking-2025",
     image: asiaTravelImg,
+    liveUrl: "https://asia-travel.com.vn/vi",
     title: {
       en: "Asia Travel — Tour Booking & Management Platform",
       vi: "Asia Travel — Nền Tảng Đặt & Quản Lý Tour Du Lịch"
@@ -187,6 +190,7 @@ export const projectsData = [
   {
     id: "tino-page-platform",
     image: tinoPageImg,
+    liveUrl: "https://www.tinopage.com/",
     title: {
       en: "Tino Page — Bio Page, CMS & Landing Page Platform",
       vi: "Tino Page — Nền Tảng Bio Page, CMS & Landing Page"
@@ -247,6 +251,7 @@ export const projectsData = [
   {
     id: "goplus-ai-platform",
     image: goplusAiImg,
+    liveUrl: "https://goplusai.com/home/overview",
     title: {
       en: "GoPlusAI — Multi-tool Generative AI Platform",
       vi: "GoPlusAI — Nền Tảng AI Tạo Sinh Đa Công Cụ"
@@ -307,6 +312,7 @@ export const projectsData = [
     id: "biolink-app",
     isMergedInto: "tino-page-platform",
     image: tinoPageImg,
+    liveUrl: "https://www.tinopage.com/",
     title: {
       en: "BioLink — Personal Profile & Link Builder",
       vi: "BioLink — Ứng Dụng Tạo Trang Link Cá Nhân & Profile"
@@ -371,6 +377,7 @@ export const getLocalizedProjects = (lang = 'en') => {
     .map(project => ({
     id: project.id,
     image: project.image,
+    liveUrl: project.liveUrl,
     title: project.title[currentLang] || project.title.en,
     shortDescription: project.shortDescription[currentLang] || project.shortDescription.en,
     description: project.description[currentLang] || project.description.en,

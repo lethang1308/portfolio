@@ -20,7 +20,36 @@
     "p2": "My expertise spans across designing intuitive client experiences, architecting RESTful services, database optimization, multi-store systems, and automated deployments.",
     "exp": "3+ Years Experience",
     "available": "Available for new opportunities",
-    "location": "Ha Noi City, Vietnam"
+    "location": "Ha Noi City, Vietnam",
+    "workExperience": {
+      "eyebrow": "Work Experience",
+      "title": "Professional Experience",
+      "periodStart": "09/2025 –",
+      "periodEnd": "Present",
+      "company": "Tino Tech Technology",
+      "location": "Ha Noi, VN",
+      "type": "Full time",
+      "role": "Full-Stack Developer",
+      "responsibilities": [
+        "Designing database structures and high-performance RESTful APIs for Ionic mobile applications and multi-service web platforms.",
+        "Building core business workflows including distance-based fare calculation, driver-passenger matching, food ordering, revenue reporting, and online payment integration.",
+        "Integrating AI chat, image and video generation, file and audio processing, and voice AI with token usage and payment management.",
+        "Optimizing queues and Redis for reliable AI jobs and concurrent background tasks at scale.",
+        "Building role-based access control for multi-branch SaaS systems and two-way automated Google Sheets synchronization."
+      ]
+    },
+    "professionalSkills": {
+      "eyebrow": "Professional Skills",
+      "title": "Expertise & Technology",
+      "groups": {
+        "backend": { "label": "Back-end", "items": ["PHP", "Laravel", "RESTful APIs", "Queues & Jobs", "Eloquent ORM", "Authentication"] },
+        "database": { "label": "Database & Cache", "items": ["MySQL", "PostgreSQL", "Redis"] },
+        "frontend": { "label": "Front-end", "items": ["ReactJS", "Vue.js", "Angular / Ionic", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "Blade"] },
+        "tools": { "label": "Tools & Deployment", "items": ["Git", "GitHub", "Linux Server", "Nginx", "Postman", "API Integration"] },
+        "ai": { "label": "AI Skills & Emerging Technology", "items": ["AI API", "Prompt Engineering", "SSE Streaming", "AI Agents (Codex, Claude)"] }
+      },
+      "footnote": "Experienced in multi-service web, mobile, and SaaS systems."
+    }
   },
   "aboutPage": {
     "title": "About Me",

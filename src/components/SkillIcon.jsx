@@ -13,6 +13,17 @@ import gitLogo from 'devicon/icons/git/git-plain.svg';
 import kafkaLogo from 'devicon/icons/apachekafka/apachekafka-original.svg';
 import awsLogo from 'devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg';
 import graphqlLogo from 'devicon/icons/graphql/graphql-plain.svg';
+import vueLogo from 'devicon/icons/vuejs/vuejs-plain.svg';
+import postgresqlLogo from 'devicon/icons/postgresql/postgresql-plain.svg';
+import javascriptLogo from 'devicon/icons/javascript/javascript-plain.svg';
+import htmlLogo from 'devicon/icons/html5/html5-plain.svg';
+import cssLogo from 'devicon/icons/css3/css3-plain.svg';
+import bootstrapLogo from 'devicon/icons/bootstrap/bootstrap-plain.svg';
+import ionicLogo from 'devicon/icons/ionic/ionic-original.svg';
+import githubLogo from 'devicon/icons/github/github-original.svg';
+import linuxLogo from 'devicon/icons/linux/linux-plain.svg';
+import nginxLogo from 'devicon/icons/nginx/nginx-original.svg';
+import postmanLogo from 'devicon/icons/postman/postman-plain.svg';
 
 const icons = {
   React: reactLogo,
@@ -29,6 +40,17 @@ const icons = {
   Kafka: kafkaLogo,
   AWS: awsLogo,
   GraphQL: graphqlLogo,
+  'Vue.js': vueLogo,
+  PostgreSQL: postgresqlLogo,
+  JavaScript: javascriptLogo,
+  HTML: htmlLogo,
+  CSS: cssLogo,
+  Bootstrap: bootstrapLogo,
+  Ionic: ionicLogo,
+  GitHub: githubLogo,
+  Linux: linuxLogo,
+  Nginx: nginxLogo,
+  Postman: postmanLogo,
 };
 
 export default function SkillIcon({ name, className = 'w-8 h-8' }) {
