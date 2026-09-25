@@ -16,9 +16,9 @@
   },
   "about": {
     "title": "About Me",
-    "p1": "I'm a full stack developer passionate about creating complete digital products—from responsive frontend interfaces (React, Angular, Tailwind CSS) to robust backend APIs (PHP/Laravel, Node.js, MySQL, Redis).",
-    "p2": "My expertise spans across designing intuitive client experiences, architecting RESTful services, database optimization, multi-store systems, and automated deployments.",
-    "exp": "3+ Years Experience",
+    "p1": "I am a Full-Stack Developer studying Information Technology at the University of Transport and Communications (UTC), passionate about building end-to-end software solutions—from intuitive frontend interfaces (React, Angular, Tailwind CSS) to secure Backend & API architectures (PHP/Laravel, MySQL, Redis).",
+    "p2": "Leveraging production experience at Tino Tech Technology, my expertise focuses on RESTful API design, real-time WebSocket systems, Zalo Mini App & Mobile development, and database performance optimization.",
+    "exp": "1+ Years Production Experience",
     "available": "Available for new opportunities",
     "location": "Ha Noi City, Vietnam",
     "workExperience": {
@@ -31,11 +31,11 @@
       "type": "Full time",
       "role": "Full-Stack Developer",
       "responsibilities": [
-        "Designing database structures and high-performance RESTful APIs for Ionic mobile applications and multi-service web platforms.",
-        "Building core business workflows including distance-based fare calculation, driver-passenger matching, food ordering, revenue reporting, and online payment integration.",
-        "Integrating AI chat, image and video generation, file and audio processing, and voice AI with token usage and payment management.",
-        "Optimizing queues and Redis for reliable AI jobs and concurrent background tasks at scale.",
-        "Building role-based access control for multi-branch SaaS systems and two-way automated Google Sheets synchronization."
+        "Designing normalized database structures and high-performance RESTful APIs for Ionic mobile apps, Zalo Mini App, and multi-service web platforms.",
+        "Developing real-time geo-spatial matching algorithms for on-demand gigs using VietMap GL, Turf.js, and Marker Clustering alongside multi-branch enterprise ATS workflows.",
+        "Building closed-loop omnichannel F&B systems: QR table ordering, real-time Kitchen Display Systems, and automated inventory deduction based on recipe formulas.",
+        "Architecting goal-funded crowdfunding reward engines and real-time chat systems via WebSockets and Pusher, handling ticket escrow and transactional refunds.",
+        "Automating payment processing and transaction reconciliation via dynamic VietQR, SePay Webhooks, and VNPay, with role-based access control for multi-store SaaS architectures."
       ]
     },
     "professionalSkills": {
@@ -58,9 +58,9 @@
     "location": "Ha Noi City, Vietnam",
     "status": "Available for opportunities",
     "storyTitle": "My Story",
-    "storyP1": "I'm a full stack developer who enjoys building complete digital solutions. My journey spans constructing rich client-side applications as well as designing scalable backend infrastructures, databases, and background services.",
-    "storyP2": "Over the years, I've developed and deployed multi-store e-commerce platforms, recruitment apps, travel booking engines, and customized CMS applications using PHP (Laravel), Node.js, React, Angular/Ionic, and Tailwind CSS.",
-    "storyP3": "When I'm not writing code, you can find me exploring UI/UX trends, optimizing database query planners, or building cross-platform mini apps.",
+    "storyP1": "I am a Full-Stack Developer currently studying Information Technology at the University of Transport and Communications (UTC), passionate about transforming technical challenges into robust, production-ready software solutions.",
+    "storyP2": "Since September 2025 at Tino Tech Technology, I have actively architected and developed production platforms including a multi-store e-commerce & F&B ecosystem on Zalo Mini App (EcoLuck) and an enterprise recruitment platform (JobGogo).",
+    "storyP3": "I am dedicated to continuous learning, writing clean and maintainable code, optimizing database performance, and ensuring high system reliability across all deployments.",
     "principlesTitle": "My Principles",
     "principles": [
       "Deliver seamless user experience backed by scalable code",
@@ -69,13 +69,12 @@
       "Continuously measure, observe, and optimize performance",
       "Enforce security and reliability across every application layer"
     ],
-    "journeyTitle": "Fullstack Journey",
+    "journeyTitle": "Full-Stack Journey",
     "journey": [
-      { "year": "2019", "title": "Started my web development journey with HTML/CSS, JavaScript, PHP, and MySQL." },
-      { "year": "2020", "title": "Mastered Laravel framework and built custom CMS platforms and e-commerce backends." },
-      { "year": "2021", "title": "Expanded into Frontend SPA frameworks (React.js, Angular, TypeScript) and Tailwind CSS." },
-      { "year": "2022", "title": "Built cross-platform apps (Ionic Framework, Zalo Mini App SDK) and Redis caching layers." },
-      { "year": "2023+", "title": "Engineering fullstack ecosystems, multi-store platforms, and high-performance Web & Mobile applications." }
+      { "year": "2023", "title": "Began studying Information Technology at the University of Transport and Communications (UTC); built core foundations in algorithms, data structures, and web development (HTML/CSS, JS, PHP, MySQL)." },
+      { "year": "2024", "title": "Deep diving into Laravel MVC architecture, relational database design, and modern SPA frontend frameworks (ReactJS, Vue.js, Tailwind CSS)." },
+      { "year": "2025", "title": "Expanding into Hybrid Mobile development (Angular / Ionic, Capacitor), Zalo Mini App SDK, and real-time WebSockets." },
+      { "year": "09/2025 – Present", "title": "Full-Stack Developer at Tino Tech Technology: architecting and launching production platforms including EcoLuck and JobGogo." }
     ],
     "buildSystemsTitle": "How I Build Fullstack Systems",
     "buildSystems": [
@@ -90,9 +89,9 @@
     "achievementsTitle": "Achievements",
     "achievements": {
       "projects": "Fullstack Projects",
-      "openSource": "OS Repositories",
+      "openSource": "Completed Repositories",
       "experience": "Years Exp",
-      "rps": "Users Served/Day"
+      "rps": "RESTful APIs Built"
     },
     "focusedTitle": "Currently Focused On",
     "focusAreas": [
@@ -128,6 +127,9 @@
       "PHP": "Popular server-side scripting language for web platforms",
       "Laravel": "Elegant PHP web framework for robust backend APIs",
       "Node.js": "JavaScript runtime for scalable server applications",
+      "Node": {
+        "js": "JavaScript runtime for scalable server applications"
+      },
       "Express": "Fast, unopinionated Node.js web framework",
       "MySQL": "Reliable relational database management system",
       "PostgreSQL": "Advanced open-source relational database",
@@ -143,7 +145,8 @@
     "learningSkills": {
       "Next.js": "React framework for production & SSR",
       "AWS": "Cloud infrastructure & deployment",
-      "GraphQL": "Flexible query language for APIs"
+      "GraphQL": "Flexible query language for APIs",
+      "Kafka": "Distributed event streaming platform for high-throughput data"
     }
   },
   "projects": {
@@ -151,6 +154,7 @@
     "featuredDesc": "Fullstack web applications, Zalo Mini Apps, and enterprise REST APIs.",
     "viewAll": "View all projects",
     "viewProject": "View Project Details",
+    "viewDetails": "View Project Details",
     "sourceCode": "Source Code",
     "liveDemo": "Live Demo"
   },

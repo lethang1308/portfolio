@@ -334,7 +334,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
                   <div className="text-2xl font-extrabold text-blue-600 font-display">
-                    <Counter end={15} suffix="+" />
+                    <Counter end={5} suffix="+" />
                   </div>
                   <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">{t('aboutPage.achievements.projects')}</div>
                 </div>
@@ -346,13 +346,13 @@ export default function AboutPage() {
                 </div>
                 <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
                   <div className="text-2xl font-extrabold text-blue-600 font-display">
-                    <Counter end={3} suffix="+" />
+                    <Counter end={1} suffix="+" />
                   </div>
                   <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">{t('aboutPage.achievements.experience')}</div>
                 </div>
                 <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
                   <div className="text-2xl font-extrabold text-blue-600 font-display">
-                    <Counter end={100} suffix="K+" />
+                    <Counter end={50} suffix="+" />
                   </div>
                   <div className="text-[9px] font-bold text-slate-500 uppercase tracking-wider leading-none">{t('aboutPage.achievements.rps')}</div>
                 </div>

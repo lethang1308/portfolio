@@ -16,9 +16,9 @@
   },
   "about": {
     "title": "Về Tôi",
-    "p1": "Tôi là một lập trình viên Full Stack có niềm đam mê mạnh mẽ với việc phát triển các sản phẩm công nghệ hoàn chỉnh—từ giao diện người dùng (React, Angular, Tailwind CSS) đến hệ thống Backend & API bảo mật (PHP/Laravel, Node.js, MySQL, Redis).",
-    "p2": "Chuyên môn của tôi bao gồm thiết kế trải nghiệm người dùng trực quan, kiến trúc dịch vụ RESTful, tối ưu hoá truy vấn cơ sở dữ liệu, phát triển các hệ thống đa cửa hàng (Multi-store) và tự động hoá triển khai.",
-    "exp": "3+ Năm Kinh Nghiệm",
+    "p1": "Tôi là một lập trình viên Full Stack chuyên ngành Công nghệ Thông tin tại Trường Đại học Giao thông Vận tải (UTC), có niềm đam mê mạnh mẽ với việc phát triển các sản phẩm công nghệ hoàn chỉnh—từ giao diện người dùng (React, Angular, Tailwind CSS) đến hệ thống Backend & API bảo mật (PHP/Laravel, MySQL, Redis).",
+    "p2": "Với kinh nghiệm thực chiến từ các dự án tại Tino Tech Technology, tôi tập trung vào thiết kế kiến trúc RESTful APIs, hệ thống thời gian thực (WebSockets), ứng dụng Zalo Mini App / Mobile và tối ưu hóa cơ sở dữ liệu.",
+    "exp": "1+ Năm Kinh Nghiệm Thực Chiến",
     "available": "Sẵn sàng cho cơ hội mới",
     "location": "Hà Nội, Việt Nam",
     "workExperience": {
@@ -31,11 +31,11 @@
       "type": "Toàn thời gian",
       "role": "Full-Stack Developer",
       "responsibilities": [
-        "Thiết kế cấu trúc CSDL và phát triển hệ thống RESTful APIs hiệu năng cao cho ứng dụng di động (Ionic) và các nền tảng web đa dịch vụ.",
-        "Xây dựng các thuật toán nghiệp vụ cốt lõi: tính cước công theo khoảng cách, ghép nối tài xế – hành khách, quy trình đặt món, thống kê doanh thu và tích hợp cổng thanh toán trực tuyến.",
-        "Tích hợp AI (chat thông minh, sinh ảnh/video, xử lý tệp/âm thanh, voice AI) và thiết lập cơ chế quản lý tiêu thụ token & thanh toán.",
-        "Tối ưu hóa hàng đợi (Queues & Redis) để xử lý mượt mà các tác vụ AI và tính năng nền đa luồng, đảm bảo tính mở rộng và ổn định của hệ thống.",
-        "Xây dựng cơ chế phân quyền theo vai trò (RBAC) cho kiến trúc SaaS đa chi nhánh, đồng bộ dữ liệu hai chiều tự động qua Google Sheets API."
+        "Thiết kế cấu trúc CSDL quan hệ chuẩn hóa và phát triển hệ thống RESTful APIs hiệu năng cao cho ứng dụng di động (Ionic), Zalo Mini App và các nền tảng web đa dịch vụ.",
+        "Xây dựng thuật toán ghép nối việc nhanh theo định vị GPS thời gian thực (VietMap GL, Turf.js, Marker Clustering) và quy trình quản trị tuyển dụng ATS đa chi nhánh.",
+        "Phát triển hệ sinh thái F&B O2O khép kín: luồng gọi món QR tại bàn, màn hình bếp realtime (KDS) và tự động trừ kho nguyên vật liệu theo định lượng công thức món ăn (Recipe BOM).",
+        "Thiết kế kiến trúc phòng góp vé nhận thưởng (Reward Crowdfunding Engine) và hệ thống Chat thời gian thực (WebSockets & Pusher), xử lý ký quỹ và hoàn vé tự động qua Database Transactions.",
+        "Tự động hóa thanh toán và đối soát giao dịch qua VietQR động, SePay Webhook và VNPay; xây dựng cơ chế phân quyền theo vai trò (RBAC) cho kiến trúc SaaS đa cửa hàng."
       ]
     },
     "professionalSkills": {
@@ -58,9 +58,9 @@
     "location": "Hà Nội, Việt Nam",
     "status": "Sẵn sàng nhận cơ hội mới",
     "storyTitle": "Câu Chuyện Của Tôi",
-    "storyP1": "Tôi là một lập trình viên Full Stack yêu thích việc hiện thực hoá các giải pháp công nghệ toàn diện. Hành trình của tôi trải dài từ việc xây dựng các ứng dụng Client tương tác cao đến thiết kế hạ tầng Backend, cơ sở dữ liệu và các dịch vụ chạy ngầm.",
-    "storyP2": "Trong những năm qua, tôi đã phát triển và triển khai nhiều nền tảng E-Commerce đa cửa hàng, ứng dụng tuyển dụng, hệ thống đặt tour du lịch và các trang CMS quản trị bằng PHP (Laravel), Node.js, React, Angular/Ionic và Tailwind CSS.",
-    "storyP3": "Khi không viết code, bạn có thể thấy tôi đang cập nhật các xu hướng thiết kế UI/UX mới, tối ưu hoá cơ sở dữ liệu hoặc phát triển các ứng dụng Mini App đa nền tảng.",
+    "storyP1": "Tôi là một lập trình viên Full Stack hiện đang theo học chuyên ngành Công nghệ Thông tin tại Trường Đại học Giao thông Vận tải (UTC), đam mê hiện thực hoá các giải pháp phần mềm toàn diện từ ý tưởng đến sản phẩm hoàn chỉnh.",
+    "storyP2": "Từ tháng 09/2025 đến nay tại Tino Tech Technology, tôi trực tiếp tham gia phát triển các sản phẩm quy mô thực tế: nền tảng thương mại đa cửa hàng & F&B trên Zalo Mini App (EcoLuck) và ứng dụng tuyển dụng đa nền tảng (JobGogo).",
+    "storyP3": "Tôi luôn giữ tinh thần chủ động học hỏi, chú trọng viết mã nguồn sạch, tối ưu hoá hiệu năng truy vấn và bảo đảm độ ổn định cao cho từng tính năng đưa vào vận hành.",
     "principlesTitle": "Nguyên Tắc Làm Việc",
     "principles": [
       "Mang lại trải nghiệm người dùng tuyệt vời đi kèm mã nguồn mở rộng cao",
@@ -69,13 +69,12 @@
       "Liên tục đo lường, giám sát và tối ưu hoá hiệu năng hệ thống",
       "Đảm bảo an toàn bảo mật và độ tin cậy trên từng tầng ứng dụng"
     ],
-    "journeyTitle": "Hành Trình Full Stack",
+    "journeyTitle": "Hành Trình Phát Triển",
     "journey": [
-      { "year": "2019", "title": "Bắt đầu hành trình với HTML/CSS, JavaScript, PHP và MySQL." },
-      { "year": "2020", "title": "Thành thạo Laravel framework, xây dựng các ứng dụng CMS và Backend E-Commerce." },
-      { "year": "2021", "title": "Mở rộng sang các Frontend SPA Frameworks (React.js, Angular, TypeScript) và Tailwind CSS." },
-      { "year": "2022", "title": "Phát triển ứng dụng Mobile/Cross-platform (Ionic Framework, Zalo Mini App SDK) & Redis Cache." },
-      { "year": "2023+", "title": "Xây dựng hệ sinh thái Full Stack toàn diện, các nền tảng Multi-store và ứng dụng Web & Mobile hiệu năng cao." }
+      { "year": "2023", "title": "Bắt đầu theo học ngành Công nghệ Thông tin tại Trường Đại học Giao thông Vận tải (UTC); xây dựng nền tảng vững chắc về thuật toán, cấu trúc dữ liệu và lập trình Web cơ bản (HTML/CSS, JS, PHP, MySQL)." },
+      { "year": "2024", "title": "Nghiên cứu chuyên sâu kiến trúc MVC với Laravel, thiết kế CSDL quan hệ và làm quen các framework Frontend SPA (ReactJS, Vue.js, Tailwind CSS)." },
+      { "year": "2025", "title": "Mở rộng sang phát triển ứng dụng di động Hybrid (Angular / Ionic, Capacitor) và Zalo Mini App SDK; tìm hiểu giao tiếp thời gian thực WebSockets và Redis Cache." },
+      { "year": "09/2025 – Hiện tại", "title": "Làm việc chính thức tại Tino Tech Technology với vai trò Full-Stack Developer: trực tiếp thiết kế kiến trúc và phát triển production các nền tảng EcoLuck và JobGogo." }
     ],
     "buildSystemsTitle": "Quy Trình Xây Dựng Hệ Thống Full Stack",
     "buildSystems": [
@@ -92,7 +91,7 @@
       "projects": "Dự Án Full Stack",
       "openSource": "Mã Nguồn Đã Đóng Góp",
       "experience": "Năm Kinh Nghiệm",
-      "rps": "Người Dùng Phục Vụ/Ngày"
+      "rps": "RESTful APIs Đã Dựng"
     },
     "focusedTitle": "Lĩnh Vực Đang Tập Trung",
     "focusAreas": [
@@ -128,6 +127,9 @@
       "PHP": "Ngôn ngữ kịch bản máy chủ phổ biến cho các nền tảng Web",
       "Laravel": "Framework PHP tinh tế cho các hệ thống Backend API tin cậy",
       "Node.js": "Môi trường thực thi JavaScript cho app máy chủ mở rộng",
+      "Node": {
+        "js": "Môi trường thực thi JavaScript cho app máy chủ mở rộng"
+      },
       "Express": "Framework web nhanh, linh hoạt cho Node.js",
       "MySQL": "Hệ quản trị cơ sở dữ liệu quan hệ tin cậy, phổ biến",
       "PostgreSQL": "Hệ quản trị cơ sở dữ liệu quan hệ mã nguồn mở nâng cao",
@@ -143,7 +145,8 @@
     "learningSkills": {
       "Next.js": "Framework React hỗ trợ Production & Render phía máy chủ (SSR)",
       "AWS": "Dịch vụ hạ tầng điện toán đám mây & triển khai",
-      "GraphQL": "Ngôn ngữ truy vấn linh hoạt cho API"
+      "GraphQL": "Ngôn ngữ truy vấn linh hoạt cho API",
+      "Kafka": "Nền tảng phân tán luồng sự kiện phân tán cho hệ thống lớn"
     }
   },
   "projects": {
@@ -151,6 +154,7 @@
     "featuredDesc": "Các ứng dụng Web Fullstack, Zalo Mini App và hệ thống REST API doanh nghiệp.",
     "viewAll": "Xem tất cả dự án",
     "viewProject": "Xem Chi Tiết Dự Án",
+    "viewDetails": "Xem chi tiết dự án",
     "sourceCode": "Mã Nguồn",
     "liveDemo": "Xem Demo"
   },

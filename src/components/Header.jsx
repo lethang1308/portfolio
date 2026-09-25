@@ -91,7 +91,10 @@ export default function Header() {
         <div className="hidden md:flex items-center space-x-4">
           <LanguageSwitcher />
           <a
-            href="#cv"
+            href="/LE_DINH_THANG_CV.pdf"
+            download="LE_DINH_THANG_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center bg-slate-950 text-white px-5 py-2.5 text-xs font-bold tracking-widest rounded-md hover:bg-slate-800 hover:scale-[1.02] active:scale-[0.98] transition-all uppercase"
           >
             {t('nav.downloadCv')}
@@ -136,7 +139,10 @@ export default function Header() {
             )
           ))}
           <a
-            href="#cv"
+            href="/LE_DINH_THANG_CV.pdf"
+            download="LE_DINH_THANG_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="w-full text-center bg-slate-950 text-white py-3 text-xs font-bold tracking-widest rounded-md hover:bg-slate-800 transition-all block uppercase"
           >
